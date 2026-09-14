@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+secrets/**
+!secrets/.gitkeep
+!secrets/README.md
+**/__pycache__/
+*.pyc
+.venv/
+cache/
+*.har
+*session*.json
+*cookies*
