@@ -91,10 +91,11 @@ Repos `corpus/tacosint-repos.md` — outils/scripts OSINT à réutiliser en cage
 ## Recurring playbooks (général)
 
 ### Username / alias
-Expand variants → Sherlock/Maigret/WhatsMyName → reverse image bio pics → emails liés.
+**Prioritize** Instant Username–style (`tools/instant_username.py` / [instantusername.com](https://instantusername.com/)) → Rosint Reddit archives (`tools/rosint_reddit.py` / [rosint.dev](https://www.rosint.dev/)) → Sherlock/Maigret/WhatsMyName → reverse image bio pics → emails liés.  
+One-shot: `python3 tools/username_osint.py pivot <handle>`.
 
 ### Email
-Holehe → GHunt/Epieos → OSINT Industries **sparingly** (quota 4–5).
+Holehe → GHunt/Epieos → OSINT Industries **when keyed** (quota 4–5). If no Industries key, stay on free tools above.
 
 ### Image / geolocation
 EXIF → Yandex/Bing/Lens → landmarks → OSM/Overpass → GeoSpy hypothèses.

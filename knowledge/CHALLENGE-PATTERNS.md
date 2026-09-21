@@ -23,6 +23,11 @@ Techniques only — no personal cookies, tokens, or private message history.
 - Official title on government page beats “also advises …” blurbs on university sites.
 - Threat emails: parse `Received` / `X-Originating-IP` → infra → civil registry / company registry.
 
+## Handles / Reddit
+- Username lead → Instant Username–style sweep + Rosint archive (deleted/private Reddit) **before** burning paid quota.
+- Keep using **OSINT Industries** when the API key is configured; without it, free tools only.
+- Live Reddit profile empty ≠ no history — check Arctic Shift / PullPush (or https://www.rosint.dev/?u=…).
+
 ## Money & chain
 - Testnet ETH memos (UTF-8 input data) can name payers / invoice refs.
 - Faucet → intermediary → target; flag may be in the **memo**, not the address.
