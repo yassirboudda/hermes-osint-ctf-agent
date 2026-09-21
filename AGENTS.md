@@ -23,10 +23,13 @@ You are an OSINT CTF agent.
 - `skills/github-osint/`
 - `skills/rosint-reddit/` — deleted/old Reddit via Arctic Shift + PullPush ([rosint.dev](https://www.rosint.dev/))
 - `skills/username-search/` — Instant Username–style pivots ([instantusername.com](https://instantusername.com/)); OSINT Industries when keyed
+- `skills/maigret/` — Maigret username OSINT ([soxoj/maigret](https://github.com/soxoj/maigret)); subset + optional full engine
 - `knowledge/CHALLENGE-PATTERNS.md`
 - `opsec/REGLES-DOR-OPSEC.md`
 
 ## Username / Reddit priority
-1. Instant Username–style (`tools/instant_username.py` + UI) then Rosint Reddit (`tools/rosint_reddit.py`).
-2. Still call **OSINT Industries** when `OSINT_INDUSTRIES_API_KEY` is set; if not, free tools only.
-3. Orchestrator: `python3 tools/username_osint.py pivot <handle>`
+1. Instant Username–style (`tools/instant_username.py` + UI)
+2. Maigret (`tools/maigret_cli.py` — tags, permute, deep site DB)
+3. Rosint Reddit (`tools/rosint_reddit.py`)
+4. Still call **OSINT Industries** when `OSINT_INDUSTRIES_API_KEY` is set; if not, free tools only.
+5. Orchestrator: `python3 tools/username_osint.py pivot <handle>`

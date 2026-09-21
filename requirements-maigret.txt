@@ -1,0 +1,3 @@
+# Optional: full Maigret engine (5900+ sites + socid parsing)
+# Soft-crawl subset works without this — see tools/maigret_cli.py
+maigret>=0.5.0

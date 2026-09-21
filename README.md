@@ -1,7 +1,31 @@
-# Hermes OSINT CTF Agent (public template)
+<p align="center">
+  <img src="static/hermes-osint-icon.png" alt="Hermes OSINT CTF Agent" width="128" height="128" />
+</p>
 
-Open-source **OSINT CTF agent template** used during events such as Deep Threats (DGA).  
-Designed to run with **DeepSeek** as the orchestrator and **OpenRouter** sub-agents for heavy OSINT / vision / code tasks.
+<h1 align="center">Hermes OSINT CTF Agent</h1>
+
+<p align="center">
+  Open-source <b>OSINT CTF agent template</b> — DeepSeek orchestrator + OpenRouter sub-agents.<br/>
+  Soft crawl · archives · username pivots · CTFd / OSINTMapper hooks.
+</p>
+
+<p align="center">
+  <a href="https://github.com/yassirboudda/hermes-osint-ctf-agent/stargazers"><img src="https://img.shields.io/github/stars/yassirboudda/hermes-osint-ctf-agent?style=for-the-badge&logo=github&color=2dd4bf&labelColor=0b1220" alt="Stars" /></a>
+  <a href="https://github.com/yassirboudda/hermes-osint-ctf-agent/blob/main/LICENSE"><img src="https://img.shields.io/github/license/yassirboudda/hermes-osint-ctf-agent?style=for-the-badge&color=f59e0b&labelColor=0b1220" alt="MIT License" /></a>
+  <img src="https://img.shields.io/badge/OSINT-only-0ea5e9?style=for-the-badge&labelColor=0b1220" alt="OSINT only" />
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0b1220" alt="Python" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/DeepSeek-orchestrator-4f46e5?style=flat-square&labelColor=111827" alt="DeepSeek" />
+  <img src="https://img.shields.io/badge/OpenRouter-sub--agents-10b981?style=flat-square&labelColor=111827" alt="OpenRouter" />
+  <a href="https://www.rosint.dev/"><img src="https://img.shields.io/badge/Rosint-Reddit%20archives-ff4500?style=flat-square&labelColor=111827" alt="Rosint" /></a>
+  <a href="https://instantusername.com/"><img src="https://img.shields.io/badge/InstantUsername-pivots-06b6d4?style=flat-square&labelColor=111827" alt="Instant Username" /></a>
+  <a href="https://github.com/soxoj/maigret"><img src="https://img.shields.io/badge/Maigret-5900%2B%20sites-e11d48?style=flat-square&labelColor=111827&logo=github" alt="Maigret" /></a>
+  <img src="https://img.shields.io/badge/OSINT%20Industries-when%20keyed-8b5cf6?style=flat-square&labelColor=111827" alt="OSINT Industries" />
+</p>
+
+---
 
 > **This repository contains NO live secrets.**  
 > Every API key, cookie, refresh token, and password is a placeholder (`****`).  
@@ -9,10 +33,26 @@ Designed to run with **DeepSeek** as the orchestrator and **OpenRouter** sub-age
 
 ## What you get
 
-- Skills & knowledge for OSINT CTF methodology (archives, SOCMINT, GEOINT, stego, mail headers, on-chain testnets, legal docs in fictional nations, etc.)
-- Tooling stubs: CTFd session client, OSINTMapper API control, OSINT Industries (API key), **Rosint-style Reddit archives**, **Instant Username–style** multi-site search, captcha solvers, Apify / Browser-Use hooks
-- Hard **OPSEC** rules (dedicated UA, no fuzz, soft crawl) — learned the hard way
-- Corpus of public OSINT write-up digests for technique recall
+| Area | Capability |
+|------|------------|
+| Skills & corpus | OSINT CTF methodology, write-up digests, challenge patterns |
+| Username pivots | **Instant Username**, **Maigret** (soxoj), Sherlock/WMN-compatible flows |
+| Reddit archives | **Rosint-style** Arctic Shift + PullPush (`tools/rosint_reddit.py`) |
+| Enrichment | **OSINT Industries** when API key is set (skipped if absent) |
+| Platform hooks | CTFd, OSINTMapper, captcha solvers, Browser-Use / Apify |
+| OPSEC | Dedicated UA, no fuzz / bruteforce / SE — see `opsec/` |
+
+## Username priority
+
+```text
+Instant Username  →  Maigret  →  Rosint Reddit  →  OSINT Industries (if keyed)
+```
+
+One-shot:
+
+```bash
+python3 tools/username_osint.py pivot some_handle
+```
 
 ## Models
 
@@ -33,6 +73,8 @@ cp .env.example .env
 
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+# optional full Maigret engine (5900+ sites):
+# pip install -r requirements-maigret.txt
 
 # Examples (read-only by default)
 python3 tools/ctfd_cli.py list          # needs CTFD_* in .env
@@ -42,17 +84,36 @@ python3 tools/osintmapper_cli.py status # needs OSINTMAPPER_* in .env
 python3 tools/username_osint.py pivot some_handle
 python3 tools/rosint_reddit.py user some_handle          # like https://www.rosint.dev/?u=…
 python3 tools/instant_username.py search some_handle     # like https://instantusername.com/?q=…
+python3 tools/maigret_cli.py search some_handle --top 80 # Maigret subset or full engine
+python3 tools/maigret_cli.py permute john doe --limit 20
 # OSINT Industries still used when OSINT_INDUSTRIES_API_KEY is set
 ```
 
 Wire this folder as the skill/knowledge root of your Hermes / Cursor / custom agent runtime.
+
+## Tool widgets
+
+<p align="center">
+  <a href="https://www.rosint.dev/?u=Wuan_Xijiang"><img src="https://img.shields.io/badge/Open-Rosint%20demo-ff4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Rosint demo" /></a>
+  <a href="https://instantusername.com/?q=wuan_xijiang"><img src="https://img.shields.io/badge/Open-InstantUsername%20demo-06b6d4?style=for-the-badge" alt="InstantUsername demo" /></a>
+  <a href="https://github.com/soxoj/maigret"><img src="https://img.shields.io/badge/Upstream-Maigret-e11d48?style=for-the-badge&logo=github" alt="Maigret" /></a>
+</p>
+
+```bash
+# Maigret skill helpers
+python3 tools/maigret_cli.py status
+python3 tools/maigret_cli.py stats
+python3 tools/maigret_cli.py search soxoj --tags coding,social --top 100
+```
+
+Bundled curated site DB: [`data/maigret_subset.json`](data/maigret_subset.json) (~200 top sites, MIT attribution to [soxoj/maigret](https://github.com/soxoj/maigret)).
 
 ## Required third parties (bring your own keys)
 
 See `.env.example` for the full list. Typical stack:
 
 - **OSINT Industries** — API key ([docs](https://api.osint.industries/misc/docs)); used when set, skipped when absent
-- **Rosint / Instant Username** — no keys; `tools/rosint_reddit.py` + `tools/instant_username.py` (UI twins: [rosint.dev](https://www.rosint.dev/), [instantusername.com](https://instantusername.com/))
+- **Rosint / Instant Username / Maigret** — no keys for free path; optional `pip install maigret` for full engine
 - **Mailbox** — dedicated CTF mailbox (+ OAuth refresh if Gmail)
 - **Captcha** — CapSolver and/or 2Captcha
 - **Browser automation** — Browser-Use pool and/or Apify actors
@@ -67,10 +128,23 @@ See `.env.example` for the full list. Typical stack:
 3. Use a **dedicated User-Agent** and **CTF-only API keys** — never your daily desktop fingerprint.  
 4. See `opsec/REGLES-DOR-OPSEC.md`.
 
+## Skills map
+
+| Skill | Path |
+|-------|------|
+| OSINT CTF core | `skills/osint-ctf/` |
+| Username search | `skills/username-search/` |
+| Maigret | `skills/maigret/` |
+| Rosint Reddit | `skills/rosint-reddit/` |
+| GitHub OSINT | `skills/github-osint/` |
+| CTFd / Mapper / Captcha | `skills/ctfd/`, `skills/osintmapper/`, `skills/captcha-browser/` |
+
 ## Disclaimer
 
 For educational / authorized CTF use. Authors are not responsible for misuse.  
 Do not attack real infrastructure. Respect each event’s rules and local law.
+
+Maigret subset data © [soxoj/maigret](https://github.com/soxoj/maigret) contributors (MIT).
 
 ## License
 

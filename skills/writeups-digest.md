@@ -91,8 +91,9 @@ Repos `corpus/tacosint-repos.md` — outils/scripts OSINT à réutiliser en cage
 ## Recurring playbooks (général)
 
 ### Username / alias
-**Prioritize** Instant Username–style (`tools/instant_username.py` / [instantusername.com](https://instantusername.com/)) → Rosint Reddit archives (`tools/rosint_reddit.py` / [rosint.dev](https://www.rosint.dev/)) → Sherlock/Maigret/WhatsMyName → reverse image bio pics → emails liés.  
-One-shot: `python3 tools/username_osint.py pivot <handle>`.
+**Prioritize** Instant Username–style (`tools/instant_username.py` / [instantusername.com](https://instantusername.com/)) → **Maigret** (`tools/maigret_cli.py` / [soxoj/maigret](https://github.com/soxoj/maigret)) → Rosint Reddit archives (`tools/rosint_reddit.py` / [rosint.dev](https://www.rosint.dev/)) → Sherlock/WhatsMyName → reverse image bio pics → emails liés.  
+One-shot: `python3 tools/username_osint.py pivot <handle>`.  
+Name parts → variants: `python3 tools/maigret_cli.py permute john doe`.
 
 ### Email
 Holehe → GHunt/Epieos → OSINT Industries **when keyed** (quota 4–5). If no Industries key, stay on free tools above.

@@ -27,9 +27,10 @@ Hard OSINT / long context / vision → OpenRouter sub-agent; parent stays DeepSe
 - `../skills/osint-ctf-corpus/` — offline write-up corpus
 - `../knowledge/` — patterns learned in live CTFs (sanitized)
 - `../opsec/REGLES-DOR-OPSEC.md` — mandatory before network I/O
-- `../tools/` — CTFd, OSINTMapper, OSINT Industries, Rosint Reddit, Instant Username helpers
+- `../tools/` — CTFd, OSINTMapper, OSINT Industries, Rosint Reddit, Instant Username, Maigret helpers
 - `../skills/rosint-reddit/` — deleted/old Reddit history (Arctic Shift + PullPush)
 - `../skills/username-search/` — Instant Username–first pivots; Industries when keyed
+- `../skills/maigret/` — Maigret username OSINT (subset + optional full engine)
 
 ## Soft crawl / anti-ban
 - Dedicated `$CTF_UA` ≠ desktop UA
