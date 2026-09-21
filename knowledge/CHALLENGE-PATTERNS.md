@@ -24,9 +24,10 @@ Techniques only — no personal cookies, tokens, or private message history.
 - Threat emails: parse `Received` / `X-Originating-IP` → infra → civil registry / company registry.
 
 ## Handles / Reddit
-- Username lead → Instant Username–style sweep + Rosint archive (deleted/private Reddit) **before** burning paid quota.
+- Username lead → Instant Username–style sweep → **Maigret** (tags / permute) → Rosint archive (deleted/private Reddit) **before** burning paid quota.
 - Keep using **OSINT Industries** when the API key is configured; without it, free tools only.
 - Live Reddit profile empty ≠ no history — check Arctic Shift / PullPush (or https://www.rosint.dev/?u=…).
+- Maigret SOWEL: SOTL-2.2 / 6.1 / 6.2 (account & nickname reuse).
 
 ## Money & chain
 - Testnet ETH memos (UTF-8 input data) can name payers / invoice refs.

@@ -1,0 +1,3765 @@
+{
+  "source": "https://github.com/soxoj/maigret (MIT) — curated subset for Hermes soft-crawl",
+  "license": "MIT (Maigret / soxoj)",
+  "note": "Subset only: top Alexa-ranked sites without auth headers; exclude nsfw/dating. Prefer full maigret package for 5900+ sites.",
+  "count": 202,
+  "tags_freq": {
+    "social": 66,
+    "business": 35,
+    "apps": 34,
+    "coding": 32,
+    "tech": 32,
+    "sharing": 27,
+    "blog": 20,
+    "art": 20,
+    "education": 19,
+    "gaming": 18,
+    "forum": 18,
+    "photo": 15,
+    "discussion": 15,
+    "news": 13,
+    "ru": 13,
+    "design": 12,
+    "music": 12,
+    "streaming": 11,
+    "video": 8,
+    "finance": 8,
+    "hobby": 8,
+    "freelance": 8,
+    "shopping": 7,
+    "archive": 7,
+    "links": 6,
+    "messaging": 6,
+    "writing": 6,
+    "maps": 5,
+    "stock": 5,
+    "networking": 4,
+    "wiki": 4,
+    "travel": 4,
+    "us": 4,
+    "cn": 4,
+    "reading": 4,
+    "research": 3,
+    "books": 3,
+    "crypto": 3,
+    "in": 2,
+    "review": 2
+  },
+  "sites": {
+    "GitHub": {
+      "url": "https://github.com/{username}",
+      "urlMain": "https://www.github.com/",
+      "urlProbe": "https://api.github.com/users/{username}",
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[a-zA-Z0-9](?:[a-zA-Z0-9]|-(?=[a-zA-Z0-9])){0,38}$",
+      "alexaRank": 10,
+      "tags": [
+        "business",
+        "coding",
+        "networking"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "WordPressOrg": {
+      "url": "https://profiles.wordpress.org/{username}/",
+      "urlMain": "https://wordpress.org/",
+      "urlProbe": null,
+      "checkType": "response_url",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 12,
+      "tags": [
+        "blog",
+        "coding",
+        "in"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "GooglePlayStore": {
+      "url": "https://play.google.com/store/apps/developer?id={username}",
+      "urlMain": "https://play.google.com/store",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 14,
+      "tags": [
+        "apps",
+        "gaming",
+        "social"
+      ],
+      "usernameClaimed": "KONAMI",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Wikipedia": {
+      "url": "https://en.wikipedia.org/wiki/User:{username}",
+      "urlMain": "https://en.wikipedia.org/",
+      "urlProbe": "https://en.wikipedia.org/w/api.php?action=query&format=json&list=users&ususers={username}&usprop=cancreate&formatversion=2",
+      "checkType": "message",
+      "presenseStrs": [
+        "\"userid\""
+      ],
+      "absenceStrs": [
+        "\"missing\""
+      ],
+      "regexCheck": null,
+      "alexaRank": 15,
+      "tags": [
+        "education",
+        "sharing",
+        "wiki"
+      ],
+      "usernameClaimed": "Jimbo_Wales",
+      "usernameUnclaimed": "Neverreg2847xyzq"
+    },
+    "Google Maps": {
+      "url": "https://www.google.com/maps/contrib/{username}",
+      "urlMain": "https://maps.google.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "[\"Contributions by"
+      ],
+      "absenceStrs": [
+        "My Contributions to Google Maps"
+      ],
+      "regexCheck": null,
+      "alexaRank": 17,
+      "tags": [
+        "business",
+        "maps",
+        "travel"
+      ],
+      "usernameClaimed": "105054951427011407574",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Pinterest": {
+      "url": "https://www.pinterest.com/{username}/",
+      "urlMain": "https://www.pinterest.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "\"@type\":\"ProfilePage\""
+      ],
+      "absenceStrs": [
+        "User not found."
+      ],
+      "regexCheck": null,
+      "alexaRank": 18,
+      "tags": [
+        "art",
+        "design",
+        "photo",
+        "sharing",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Amazon": {
+      "url": "https://amazon.com/author/{username}",
+      "urlMain": "https://amazon.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "authorName"
+      ],
+      "absenceStrs": [
+        "Sorry! We couldn't find that page"
+      ],
+      "regexCheck": null,
+      "alexaRank": 29,
+      "tags": [
+        "shopping",
+        "us"
+      ],
+      "usernameClaimed": "john",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Bit.ly": {
+      "url": "https://bit.ly/{username}",
+      "urlMain": "https://bit.ly",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 32,
+      "tags": [
+        "apps",
+        "business",
+        "links",
+        "social"
+      ],
+      "usernameClaimed": "john",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "WordPress": {
+      "url": "https://{username}.wordpress.com/",
+      "urlMain": "https://wordpress.com",
+      "urlProbe": null,
+      "checkType": "response_url",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[a-zA-Z][a-zA-Z0-9_-]*$",
+      "alexaRank": 34,
+      "tags": [
+        "apps",
+        "blog",
+        "tech"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Google Plus (archived)": {
+      "url": "https://web.archive.org/web/*/plus.google.com/{username}*",
+      "urlMain": "https://plus.google.com",
+      "urlProbe": "https://web.archive.org/web/timemap/?url=http%3A%2F%2Fplus.google.com%2F{username}&matchType=prefix&collapse=urlkey&output=json&fl=original%2Cmimetype%2Ctimestamp%2Cendtimestamp%2Cgroupcount%2Cuniqcount&filter=!statuscode%3A%5B45%5D..&limit=100000&_=1624789582128",
+      "checkType": "message",
+      "presenseStrs": [
+        "original"
+      ],
+      "absenceStrs": [
+        "[]"
+      ],
+      "regexCheck": null,
+      "alexaRank": 41,
+      "tags": [
+        "archive",
+        "discussion",
+        "social"
+      ],
+      "usernameClaimed": "117522081019092547227",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Telegram": {
+      "url": "https://t.me/{username}",
+      "urlMain": "https://t.me/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "<meta name=\"robots\" content=\"noindex, nofollow\">",
+        "<meta property=\"twitter:title\" content=\"Telegram: Contact"
+      ],
+      "regexCheck": "^[a-zA-Z][a-zA-Z0-9_]{4,}$",
+      "alexaRank": 42,
+      "tags": [
+        "messaging",
+        "social"
+      ],
+      "usernameClaimed": "BotFather",
+      "usernameUnclaimed": "noonewouldevereverusethis9"
+    },
+    "CSDN": {
+      "url": "https://blog.csdn.net/{username}",
+      "urlMain": "https://blog.csdn.net/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "data-username=\""
+      ],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 45,
+      "tags": [
+        "blog",
+        "cn",
+        "coding"
+      ],
+      "usernameClaimed": "csdnnews",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Reddit": {
+      "url": "https://www.reddit.com/user/{username}",
+      "urlMain": "https://www.reddit.com/",
+      "urlProbe": "https://www.reddit.com/user/{username}/about.json",
+      "checkType": "message",
+      "presenseStrs": [
+        "\"name\":"
+      ],
+      "absenceStrs": [
+        "Not Found"
+      ],
+      "regexCheck": null,
+      "alexaRank": 49,
+      "tags": [
+        "discussion",
+        "forum",
+        "news",
+        "social"
+      ],
+      "usernameClaimed": "AutoModerator",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Tumblr": {
+      "url": "https://www.tumblr.com/{username}",
+      "urlMain": "https://www.tumblr.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "profile",
+        " title="
+      ],
+      "absenceStrs": [
+        "Not found.",
+        ":404,",
+        "userAgent"
+      ],
+      "regexCheck": "^[^\\.]+$",
+      "alexaRank": 56,
+      "tags": [
+        "art",
+        "blog",
+        "social"
+      ],
+      "usernameClaimed": "soxoj",
+      "usernameUnclaimed": "zdbimdoqyt"
+    },
+    "Spotify": {
+      "url": "https://open.spotify.com/user/{username}",
+      "urlMain": "https://open.spotify.com/",
+      "urlProbe": "https://api.stats.fm/api/v1/users/{username}",
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 60,
+      "tags": [
+        "music",
+        "social",
+        "streaming"
+      ],
+      "usernameClaimed": "alex",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Flickr": {
+      "url": "https://www.flickr.com/photos/{username}",
+      "urlMain": "https://www.flickr.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 64,
+      "tags": [
+        "art",
+        "photo",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Flickr Groups": {
+      "url": "https://www.flickr.com/groups/{username}",
+      "urlMain": "https://www.flickr.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "username",
+        "\tstyle=",
+        "og:title",
+        "\t title=",
+        "blastUserName"
+      ],
+      "absenceStrs": [
+        ":404,",
+        "registryName",
+        "parentName",
+        "error-id",
+        "searchType"
+      ],
+      "regexCheck": null,
+      "alexaRank": 64,
+      "tags": [
+        "art",
+        "photo",
+        "social"
+      ],
+      "usernameClaimed": "sunny2000",
+      "usernameUnclaimed": "vozkxyhksz"
+    },
+    "Medium": {
+      "url": "https://medium.com/@{username}",
+      "urlMain": "https://medium.com/",
+      "urlProbe": "https://medium.com/feed/@{username}",
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 66,
+      "tags": [
+        "blog",
+        "discussion",
+        "writing"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "SoundCloud": {
+      "url": "https://soundcloud.com/{username}",
+      "urlMain": "https://soundcloud.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "\"hydratable\":\"user\""
+      ],
+      "absenceStrs": [
+        "SoundCloud - Hear the world’s sounds"
+      ],
+      "regexCheck": null,
+      "alexaRank": 70,
+      "tags": [
+        "music",
+        "social",
+        "streaming"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "SourceForge": {
+      "url": "https://sourceforge.net/u/{username}/profile",
+      "urlMain": "https://sourceforge.net/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "Personal Tools"
+      ],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 79,
+      "tags": [
+        "apps",
+        "archive",
+        "coding"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "VK": {
+      "url": "https://vk.com/{username}",
+      "urlMain": "https://vk.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^(?!id\\d)[a-zA-Z0-9_]*$",
+      "alexaRank": 91,
+      "tags": [
+        "ru",
+        "social"
+      ],
+      "usernameClaimed": "smith",
+      "usernameUnclaimed": "blah62831"
+    },
+    "VK (by id)": {
+      "url": "https://vk.com/id{username}",
+      "urlMain": "https://vk.com/",
+      "urlProbe": null,
+      "checkType": "response_url",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^\\d+$",
+      "alexaRank": 91,
+      "tags": [
+        "ru",
+        "social"
+      ],
+      "usernameClaimed": "270433952",
+      "usernameUnclaimed": "2131232"
+    },
+    "Launchpad": {
+      "url": "https://launchpad.net/~{username}",
+      "urlMain": "https://launchpad.net/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 93,
+      "tags": [
+        "coding",
+        "tech"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Weebly": {
+      "url": "http://{username}.weebly.com/",
+      "urlMain": "http://weebly.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "<html>"
+      ],
+      "absenceStrs": [
+        "Error - Page Not Found"
+      ],
+      "regexCheck": "^[a-zA-Z0-9]+$",
+      "alexaRank": 118,
+      "tags": [
+        "apps",
+        "business",
+        "social"
+      ],
+      "usernameClaimed": "designguild",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "linktr.ee": {
+      "url": "https://linktr.ee/{username}",
+      "urlMain": "https://linktr.ee",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 120,
+      "tags": [
+        "links",
+        "sharing",
+        "social"
+      ],
+      "usernameClaimed": "Blisscartoos",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Calendly": {
+      "url": "https://calendly.com/{username}",
+      "urlMain": "https://calendly.com",
+      "urlProbe": "https://calendly.com/api/booking/profiles/{username}",
+      "checkType": "status_code",
+      "presenseStrs": [
+        "profile",
+        " User"
+      ],
+      "absenceStrs": [
+        "The page you are looking for could not be found"
+      ],
+      "regexCheck": null,
+      "alexaRank": 145,
+      "tags": [
+        "business",
+        "us"
+      ],
+      "usernameClaimed": "john",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "GitLab": {
+      "url": "https://gitlab.com/{username}",
+      "urlMain": "https://gitlab.com/",
+      "urlProbe": "https://gitlab.com/api/v4/users?username={username}",
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "[]"
+      ],
+      "regexCheck": null,
+      "alexaRank": 155,
+      "tags": [
+        "business",
+        "coding",
+        "tech"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Twitch": {
+      "url": "https://twitchtracker.com/{username}",
+      "urlMain": "https://www.twitch.tv/",
+      "urlProbe": "https://twitchtracker.com/{username}",
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 163,
+      "tags": [
+        "gaming",
+        "social",
+        "streaming"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "SlideShare": {
+      "url": "https://www.slideshare.net/{username}",
+      "urlMain": "https://www.slideshare.net",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "user-name",
+        "pageInfo",
+        "listitem",
+        "strippedTitle"
+      ],
+      "absenceStrs": [
+        "blankProfile",
+        "username-available",
+        "robots",
+        "noindex,nofollow"
+      ],
+      "regexCheck": null,
+      "alexaRank": 171,
+      "tags": [
+        "business",
+        "documents",
+        "education",
+        "sharing"
+      ],
+      "usernameClaimed": "KumarSurya7",
+      "usernameUnclaimed": "kwbmsonxvp"
+    },
+    "StackOverflow": {
+      "url": "https://stackoverflow.com/users/filter?search={username}",
+      "urlMain": "https://stackoverflow.com",
+      "urlProbe": "https://api.stackexchange.com/2.3/users?order=desc&sort=name&inname={username}&site=stackoverflow",
+      "checkType": "message",
+      "presenseStrs": [
+        "\"items\":[{"
+      ],
+      "absenceStrs": [
+        "\"items\":[]"
+      ],
+      "regexCheck": null,
+      "alexaRank": 178,
+      "tags": [
+        "coding",
+        "discussion",
+        "tech"
+      ],
+      "usernameClaimed": "maigret",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Bluesky": {
+      "url": "https://bsky.app/profile/{username}.bsky.social",
+      "urlMain": "https://bsky.app",
+      "urlProbe": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor={username}.bsky.social",
+      "checkType": "message",
+      "presenseStrs": [
+        "\"did\""
+      ],
+      "absenceStrs": [
+        "Profile not found"
+      ],
+      "regexCheck": null,
+      "alexaRank": 184,
+      "tags": [
+        "messaging",
+        "social"
+      ],
+      "usernameClaimed": "shamerli",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Substack": {
+      "url": "https://substack.com/@{username}",
+      "urlMain": "https://substack.com",
+      "urlProbe": "https://substack.com/api/v1/user/{username}/public_profile",
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 190,
+      "tags": [
+        "blog",
+        "social",
+        "writing"
+      ],
+      "usernameClaimed": "user23",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Blogger": {
+      "url": "https://{username}.blogspot.com",
+      "urlMain": "https://www.blogger.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[a-zA-Z][a-zA-Z0-9_-]*$",
+      "alexaRank": 197,
+      "tags": [
+        "blog"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Blogger (by GAIA id)": {
+      "url": "https://www.blogger.com/profile/{username}",
+      "urlMain": "https://www.blogger.com",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [
+        "><head profile="
+      ],
+      "absenceStrs": [
+        "/edit-profile.g"
+      ],
+      "regexCheck": null,
+      "alexaRank": 197,
+      "tags": [
+        "blog"
+      ],
+      "usernameClaimed": "13443539735657463047",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Wix": {
+      "url": "https://{username}.wix.com",
+      "urlMain": "https://wix.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[^\\.]+$",
+      "alexaRank": 222,
+      "tags": [
+        "apps",
+        "business",
+        "social",
+        "tech"
+      ],
+      "usernameClaimed": "support",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "DailyMotion": {
+      "url": "https://www.dailymotion.com/{username}",
+      "urlMain": "https://www.dailymotion.com",
+      "urlProbe": "https://api.dailymotion.com/user/{username}?fields=id,username,screenname,description,avatar_720_url,cover_250_url,followers_total,following_total,videos_total,country,created_time,verified,url",
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 229,
+      "tags": [
+        "social",
+        "streaming",
+        "video"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "rstnodkwzr"
+    },
+    "Bandcamp": {
+      "url": "https://www.bandcamp.com/{username}",
+      "urlMain": "https://www.bandcamp.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 234,
+      "tags": [
+        "music",
+        "sharing",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Google Scholar": {
+      "url": "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q={username}&btnG=",
+      "urlMain": "https://scholar.google.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "class=\"gs_a\""
+      ],
+      "absenceStrs": [
+        "did not match any articles",
+        "not match"
+      ],
+      "regexCheck": null,
+      "alexaRank": 242,
+      "tags": [
+        "education",
+        "research"
+      ],
+      "usernameClaimed": "Blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Imgur": {
+      "url": "https://imgur.com/user/{username}",
+      "urlMain": "https://imgur.com",
+      "urlProbe": "https://api.imgur.com/account/v1/accounts/{username}?client_id=546c25a59c58ad7&include=trophies%2Cmedallions",
+      "checkType": "response_url",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 243,
+      "tags": [
+        "photo",
+        "sharing",
+        "social"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Yelp (by id)": {
+      "url": "https://www.yelp.com/user_details?userid={username}",
+      "urlMain": "https://www.yelp.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "Birthday",
+        "Username",
+        "First Name",
+        "Last Name",
+        "Email"
+      ],
+      "absenceStrs": [
+        "error-page",
+        " page-status",
+        " error-wrap"
+      ],
+      "regexCheck": null,
+      "alexaRank": 244,
+      "tags": [
+        "business",
+        "review",
+        "social"
+      ],
+      "usernameClaimed": "iX_lqhcobUBvM2S671_RyA",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Myspace": {
+      "url": "https://myspace.com/{username}",
+      "urlMain": "https://myspace.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 247,
+      "tags": [
+        "music",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "ThemeForest": {
+      "url": "https://themeforest.net/user/{username}",
+      "urlMain": "https://themeforest.net",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 248,
+      "tags": [
+        "apps",
+        "business",
+        "coding",
+        "design",
+        "shopping"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "YandexZnatoki": {
+      "url": "https://yandex.ru/q/profile/{username}",
+      "urlMain": "https://yandex.ru/q/",
+      "urlProbe": null,
+      "checkType": "response_url",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 255,
+      "tags": [
+        "ru"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis77777"
+    },
+    "GoodReads": {
+      "url": "https://www.goodreads.com/{username}",
+      "urlMain": "https://www.goodreads.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "og:type\" content=\"profile\""
+      ],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 259,
+      "tags": [
+        "books",
+        "reading",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Weforum": {
+      "url": "https://www.weforum.org/people/{username}",
+      "urlMain": "https://www.weforum.org",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 265,
+      "tags": [
+        "business",
+        "discussion",
+        "forum"
+      ],
+      "usernameClaimed": "adam-leismark",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Freepik": {
+      "url": "https://www.freepik.com/author/{username}",
+      "urlMain": "https://www.freepik.com",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 284,
+      "tags": [
+        "art",
+        "design",
+        "photo",
+        "sharing",
+        "stock"
+      ],
+      "usernameClaimed": "freepik",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Academia.edu": {
+      "url": "https://independent.academia.edu/{username}",
+      "urlMain": "https://www.academia.edu/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[^\\.]+$",
+      "alexaRank": 286,
+      "tags": [
+        "education",
+        "research",
+        "sharing"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "OpenStreetMap": {
+      "url": "https://www.openstreetmap.org/user/{username}",
+      "urlMain": "https://www.openstreetmap.org/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[^\\.]+$",
+      "alexaRank": 296,
+      "tags": [
+        "geosocial",
+        "maps",
+        "sharing"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "LiveJournal": {
+      "url": "https://{username}.livejournal.com",
+      "urlMain": "https://www.livejournal.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[a-zA-Z][a-zA-Z0-9_-]*$",
+      "alexaRank": 298,
+      "tags": [
+        "blog",
+        "ru"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Quora": {
+      "url": "https://www.quora.com/profile/{username}",
+      "urlMain": "https://www.quora.com/",
+      "urlProbe": null,
+      "checkType": "response_url",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 305,
+      "tags": [
+        "discussion",
+        "education",
+        "q&a",
+        "social"
+      ],
+      "usernameClaimed": "Matt-Riggsby",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Dribbble": {
+      "url": "https://dribbble.com/{username}",
+      "urlMain": "https://dribbble.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "Whoops, that page is gone."
+      ],
+      "regexCheck": "^[a-zA-Z][a-zA-Z0-9_-]*$",
+      "alexaRank": 306,
+      "tags": [
+        "business",
+        "design",
+        "professional",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Kickstarter": {
+      "url": "https://www.kickstarter.com/profile/{username}",
+      "urlMain": "https://www.kickstarter.com",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 307,
+      "tags": [
+        "business",
+        "finance"
+      ],
+      "usernameClaimed": "zhovner",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Fandom": {
+      "url": "https://www.fandom.com/u/{username}",
+      "urlMain": "https://www.fandom.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 323,
+      "tags": [
+        "forum",
+        "gaming",
+        "wiki"
+      ],
+      "usernameClaimed": "Jungypoo",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Xing": {
+      "url": "https://www.xing.com/profile/{username}",
+      "urlMain": "https://www.xing.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 332,
+      "tags": [
+        "de"
+      ],
+      "usernameClaimed": "Ivan_Ivanov",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Patreon": {
+      "url": "https://www.patreon.com/{username}",
+      "urlMain": "https://www.patreon.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 341,
+      "tags": [
+        "business",
+        "finance",
+        "social"
+      ],
+      "usernameClaimed": "annetlovart",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "DeviantART": {
+      "url": "https://{username}.deviantart.com",
+      "urlMain": "https://deviantart.com",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[a-zA-Z][a-zA-Z0-9_-]*$",
+      "alexaRank": 350,
+      "tags": [
+        "art",
+        "photo"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Gofundme": {
+      "url": "https://www.gofundme.com/f/{username}",
+      "urlMain": "https://www.gofundme.com",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 394,
+      "tags": [
+        "finance",
+        "social"
+      ],
+      "usernameClaimed": "adamcoussins",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Zhihu": {
+      "url": "https://www.zhihu.com/api/v4/members/{username}",
+      "urlMain": "https://www.zhihu.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "\"url_token\""
+      ],
+      "absenceStrs": [
+        "用户不存在"
+      ],
+      "regexCheck": null,
+      "alexaRank": 398,
+      "tags": [
+        "cn",
+        "forum"
+      ],
+      "usernameClaimed": "kaifulee",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Giphy": {
+      "url": "https://giphy.com/channel/{username}",
+      "urlMain": "https://giphy.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "Giphy",
+        "al:ios:app_name"
+      ],
+      "absenceStrs": [
+        "404 Not Found"
+      ],
+      "regexCheck": null,
+      "alexaRank": 412,
+      "tags": [
+        "art",
+        "sharing",
+        "social",
+        "video"
+      ],
+      "usernameClaimed": "theabbie",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Slack": {
+      "url": "https://{username}.slack.com",
+      "urlMain": "https://slack.com",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[a-zA-Z][a-zA-Z0-9_-]*$",
+      "alexaRank": 422,
+      "tags": [
+        "apps",
+        "business",
+        "messaging"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "BuzzFeed": {
+      "url": "https://buzzfeed.com/{username}",
+      "urlMain": "https://buzzfeed.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 465,
+      "tags": [
+        "news",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "xgtrq"
+    },
+    "W3Schools": {
+      "url": "https://pathfinder-api.kai.w3spaces.com/public-profile-api/{username}",
+      "urlMain": "https://www.w3schools.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 466,
+      "tags": [
+        "coding",
+        "education",
+        "tech"
+      ],
+      "usernameClaimed": "rly0nheart",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Naver": {
+      "url": "https://blog.naver.com/{username}",
+      "urlMain": "https://naver.com",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 475,
+      "tags": [
+        "kr"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewould"
+    },
+    "Disqus": {
+      "url": "https://disqus.com/{username}",
+      "urlMain": "https://disqus.com/",
+      "urlProbe": "https://disqus.com/api/3.0/users/details?user=username%3A{username}&attach=userFlaggedUser&api_key=E8Uh5l5fHZ6gD8U3KycjAIAk46f68Zw7C6eW8WSjZvCLXebZ7p0r1yrYDrLilk2F",
+      "checkType": "status_code",
+      "presenseStrs": [
+        "https://disqus.com/api/users/"
+      ],
+      "absenceStrs": [
+        "User matching query does not exist"
+      ],
+      "regexCheck": "^[^/]+$",
+      "alexaRank": 485,
+      "tags": [
+        "discussion",
+        "networking",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Snapchat": {
+      "url": "https://www.snapchat.com/add/{username}",
+      "urlMain": "https://www.snapchat.com",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[a-z][a-z-_.]{3,15}",
+      "alexaRank": 525,
+      "tags": [
+        "apps",
+        "messaging",
+        "social"
+      ],
+      "usernameClaimed": "teamsnapchat",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Trello": {
+      "url": "https://trello.com/{username}",
+      "urlMain": "https://trello.com/",
+      "urlProbe": "https://trello.com/1/Members/{username}",
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "model not found"
+      ],
+      "regexCheck": null,
+      "alexaRank": 535,
+      "tags": [
+        "apps",
+        "business",
+        "tasks"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "OK": {
+      "url": "https://ok.ru/{username}",
+      "urlMain": "https://ok.ru/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[a-zA-Z][a-zA-Z0-9_.-]*$",
+      "alexaRank": 537,
+      "tags": [
+        "ru",
+        "social"
+      ],
+      "usernameClaimed": "ok",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "MixCloud": {
+      "url": "https://www.mixcloud.com/{username}/",
+      "urlMain": "https://www.mixcloud.com/",
+      "urlProbe": "https://api.mixcloud.com/{username}/",
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 584,
+      "tags": [
+        "music",
+        "social",
+        "streaming"
+      ],
+      "usernameClaimed": "jenny",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "NPM": {
+      "url": "https://www.npmjs.com/~{username}",
+      "urlMain": "https://www.npmjs.com/",
+      "urlProbe": "https://registry.npmjs.org/-/v1/search?text=maintainer:{username}&size=1",
+      "checkType": "message",
+      "presenseStrs": [
+        "\"objects\":[{"
+      ],
+      "absenceStrs": [
+        "\"total\":0"
+      ],
+      "regexCheck": null,
+      "alexaRank": 590,
+      "tags": [
+        "apps",
+        "coding",
+        "tech"
+      ],
+      "usernameClaimed": "sindresorhus",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "NPM-Package": {
+      "url": "https://www.npmjs.com/package/{username}",
+      "urlMain": "https://www.npmjs.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 590,
+      "tags": [
+        "apps",
+        "coding",
+        "tech"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Slashdot": {
+      "url": "https://slashdot.org/~{username}",
+      "urlMain": "https://slashdot.org",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "user you requested does not exist"
+      ],
+      "regexCheck": null,
+      "alexaRank": 616,
+      "tags": [
+        "discussion",
+        "news",
+        "tech"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Steam": {
+      "url": "https://steamcommunity.com/id/{username}",
+      "urlMain": "https://steamcommunity.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "The specified profile could not be found"
+      ],
+      "regexCheck": null,
+      "alexaRank": 650,
+      "tags": [
+        "gaming",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Steam (Group)": {
+      "url": "https://steamcommunity.com/groups/{username}",
+      "urlMain": "https://steamcommunity.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "No group could be retrieved for the given URL"
+      ],
+      "regexCheck": null,
+      "alexaRank": 650,
+      "tags": [
+        "gaming",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Steam (by id)": {
+      "url": "https://steamcommunity.com/profiles/{username}",
+      "urlMain": "https://steamcommunity.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "The specified profile could not be found"
+      ],
+      "regexCheck": null,
+      "alexaRank": 650,
+      "tags": [
+        "forum",
+        "gaming",
+        "social"
+      ],
+      "usernameClaimed": "76561197960287930",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "DigitalOcean": {
+      "url": "https://www.digitalocean.com/community/users/{username}",
+      "urlMain": "https://www.digitalocean.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[^\\.]+$",
+      "alexaRank": 659,
+      "tags": [
+        "business",
+        "forum",
+        "tech"
+      ],
+      "usernameClaimed": "red",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "About.me": {
+      "url": "https://about.me/{username}",
+      "urlMain": "https://about.me/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 685,
+      "tags": [
+        "blog",
+        "social"
+      ],
+      "usernameClaimed": "jeff",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Instructables": {
+      "url": "https://www.instructables.com/member/{username}",
+      "urlMain": "https://www.instructables.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "404: We're sorry, things break sometimes"
+      ],
+      "regexCheck": null,
+      "alexaRank": 700,
+      "tags": [
+        "design",
+        "education",
+        "hobby"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Ameblo": {
+      "url": "https://ameblo.jp/{username}",
+      "urlMain": "https://ameblo.jp",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "profile"
+      ],
+      "absenceStrs": [
+        "THROW_NOT_FOUND_EXCEPTION"
+      ],
+      "regexCheck": null,
+      "alexaRank": 701,
+      "tags": [
+        "blog",
+        "jp"
+      ],
+      "usernameClaimed": "senpai",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "HuggingFace": {
+      "url": "https://huggingface.co/{username}",
+      "urlMain": "https://huggingface.co/",
+      "urlProbe": "https://huggingface.co/api/users/{username}/overview",
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 706,
+      "tags": [
+        "coding",
+        "llm",
+        "tech"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Laracast": {
+      "url": "https://laracasts.com/@{username}",
+      "urlMain": "https://laracasts.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[a-zA-Z0-9_-]{3,}$",
+      "alexaRank": 738,
+      "tags": [
+        "coding",
+        "education",
+        "tech"
+      ],
+      "usernameClaimed": "user1",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Fiverr": {
+      "url": "https://www.fiverr.com/{username}",
+      "urlMain": "https://www.fiverr.com/",
+      "urlProbe": null,
+      "checkType": "response_url",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 760,
+      "tags": [
+        "apps",
+        "business",
+        "freelance",
+        "shopping"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis"
+    },
+    "Paypal": {
+      "url": "https://www.paypal.com/paypalme/{username}",
+      "urlMain": "https://www.paypal.me",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "displayName",
+        "displayEmail"
+      ],
+      "absenceStrs": [
+        "<title>PayPal.Me</title><meta name=\"twitt",
+        "<div class=\"row error404\""
+      ],
+      "regexCheck": null,
+      "alexaRank": 775,
+      "tags": [
+        "apps",
+        "business",
+        "finance",
+        "fintech"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Itch.io": {
+      "url": "https://{username}.itch.io/",
+      "urlMain": "https://itch.io/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[^\\.]+$",
+      "alexaRank": 785,
+      "tags": [
+        "apps",
+        "gaming"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "BitBucket": {
+      "url": "https://bitbucket.org/{username}/",
+      "urlMain": "https://bitbucket.org/",
+      "urlProbe": "https://api.bitbucket.org/2.0/workspaces/{username}",
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[a-zA-Z0-9-_]{1,30}$",
+      "alexaRank": 801,
+      "tags": [
+        "apps",
+        "business",
+        "coding"
+      ],
+      "usernameClaimed": "atlassian",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "last.fm": {
+      "url": "https://last.fm/user/{username}",
+      "urlMain": "https://last.fm/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 863,
+      "tags": [
+        "music",
+        "social",
+        "streaming"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Gumroad": {
+      "url": "https://www.gumroad.com/{username}",
+      "urlMain": "https://www.gumroad.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "title=\"Gumroad\""
+      ],
+      "absenceStrs": [
+        "Page not found"
+      ],
+      "regexCheck": "^[^\\.]+$",
+      "alexaRank": 871,
+      "tags": [
+        "apps",
+        "business",
+        "freelance",
+        "shopping"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Upwork": {
+      "url": "https://upwork.com/fl/{username}",
+      "urlMain": "https://upwork.com",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 882,
+      "tags": [
+        "business",
+        "freelance",
+        "networking"
+      ],
+      "usernameClaimed": "admin",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Douban": {
+      "url": "https://www.douban.com/people/{username}/",
+      "urlMain": "https://www.douban.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "db-usr-profile"
+      ],
+      "absenceStrs": [
+        "返回首页"
+      ],
+      "regexCheck": null,
+      "alexaRank": 908,
+      "tags": [
+        "books",
+        "cn"
+      ],
+      "usernameClaimed": "darkmage",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Figma": {
+      "url": "https://www.figma.com/@{username}",
+      "urlMain": "https://www.figma.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "twitter:title"
+      ],
+      "absenceStrs": [
+        "<title>Figma</title>"
+      ],
+      "regexCheck": null,
+      "alexaRank": 917,
+      "tags": [
+        "apps",
+        "design"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "iStock": {
+      "url": "https://www.istockphoto.com/ru/portfolio/{username}",
+      "urlMain": "https://www.istockphoto.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "collectionName"
+      ],
+      "absenceStrs": [
+        "subheading"
+      ],
+      "regexCheck": null,
+      "alexaRank": 930,
+      "tags": [
+        "art",
+        "photo",
+        "stock"
+      ],
+      "usernameClaimed": "leowilde",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Pastebin": {
+      "url": "https://pastebin.com/u/{username}",
+      "urlMain": "https://pastebin.com/",
+      "urlProbe": null,
+      "checkType": "response_url",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 932,
+      "tags": [
+        "apps",
+        "coding",
+        "sharing"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "500px": {
+      "url": "https://500px.com/p/{username}",
+      "urlMain": "https://500px.com/",
+      "urlProbe": "https://api.500px.com/graphql?query=query%28%24username%3AString%21%29%7BuserByUsername%28username%3A%24username%29%7Bid%20legacyId%20username%20displayName%20firstName%20lastName%20registeredAt%20userProfile%7Bfirstname%20lastname%20about%20country%20city%20state%7DsocialMedia%7Bwebsite%20twitter%20facebook%20instagram%7D%7D%7D&variables=%7B%22username%22%3A%22{username}%22%7D",
+      "checkType": "message",
+      "presenseStrs": [
+        "\"legacyId\":\""
+      ],
+      "absenceStrs": [
+        "\"userByUsername\":null"
+      ],
+      "regexCheck": null,
+      "alexaRank": 938,
+      "tags": [
+        "art",
+        "photo",
+        "social"
+      ],
+      "usernameClaimed": "iansobolev",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "TradingView": {
+      "url": "https://www.tradingview.com/u/{username}",
+      "urlMain": "https://www.tradingview.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 999,
+      "tags": [
+        "finance",
+        "tech",
+        "trading"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Discogs": {
+      "url": "https://www.discogs.com/user/{username}",
+      "urlMain": "https://www.discogs.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1020,
+      "tags": [
+        "archive",
+        "music",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Jimdo": {
+      "url": "https://{username}.jimdosite.com",
+      "urlMain": "https://jimdosite.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[^\\.]+$",
+      "alexaRank": 1037,
+      "tags": [
+        "de"
+      ],
+      "usernameClaimed": "jenny",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Codepen": {
+      "url": "https://codepen.io/{username}",
+      "urlMain": "https://codepen.io/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "I'm afraid you've found a page that doesn't exist on CodePen"
+      ],
+      "regexCheck": null,
+      "alexaRank": 1087,
+      "tags": [
+        "apps",
+        "coding",
+        "design"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "kofi": {
+      "url": "https://ko-fi.com/{username}",
+      "urlMain": "https://ko-fi.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "Make income from your art!",
+        "https://storage.ko-fi.com/cdn/og.png"
+      ],
+      "regexCheck": "^[^\\.]+$",
+      "alexaRank": 1096,
+      "tags": [
+        "business",
+        "freelance",
+        "social"
+      ],
+      "usernameClaimed": "yeahkenny",
+      "usernameUnclaimed": "noonewouldeverusethis77777"
+    },
+    "Rottentomatoes": {
+      "url": "https://www.rottentomatoes.com/critic/{username}/movies",
+      "urlMain": "https://www.rottentomatoes.com",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1101,
+      "tags": [
+        "movies",
+        "streaming"
+      ],
+      "usernameClaimed": "ben-allen",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Smugmug": {
+      "url": "https://{username}.smugmug.com/",
+      "urlMain": "https://smugmug.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[^\\.]+$",
+      "alexaRank": 1114,
+      "tags": [
+        "art",
+        "photo",
+        "sharing"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "DEV Community": {
+      "url": "https://dev.to/{username}",
+      "urlMain": "https://dev.to/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[a-zA-Z][a-zA-Z0-9_-]*$",
+      "alexaRank": 1119,
+      "tags": [
+        "career",
+        "coding",
+        "discussion"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Duolingo": {
+      "url": "https://www.duolingo.com/profile/{username}",
+      "urlMain": "https://duolingo.com/",
+      "urlProbe": "https://www.duolingo.com/2017-06-30/users?username={username}",
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "{\"users\":[]}"
+      ],
+      "regexCheck": null,
+      "alexaRank": 1126,
+      "tags": [
+        "apps",
+        "education"
+      ],
+      "usernameClaimed": "duolingo",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "IBM Video": {
+      "url": "https://video.ibm.com/{username}",
+      "urlMain": "https://video.ibm.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1143,
+      "tags": [
+        "business",
+        "streaming",
+        "tech",
+        "video"
+      ],
+      "usernameClaimed": "nasahdtv",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Wikidot": {
+      "url": "http://www.wikidot.com/user:info/{username}",
+      "urlMain": "http://www.wikidot.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "Wikidot user since"
+      ],
+      "absenceStrs": [
+        "User does not exist."
+      ],
+      "regexCheck": null,
+      "alexaRank": 1183,
+      "tags": [
+        "education",
+        "sharing",
+        "wiki"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "ReverbNation": {
+      "url": "https://www.reverbnation.com/{username}",
+      "urlMain": "https://www.reverbnation.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "og:type\" content=\"band\""
+      ],
+      "absenceStrs": [],
+      "regexCheck": "^[^\\.]+$",
+      "alexaRank": 1205,
+      "tags": [
+        "music",
+        "professional",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Gitee": {
+      "url": "https://gitee.com/{username}",
+      "urlMain": "https://gitee.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1236,
+      "tags": [
+        "cn"
+      ],
+      "usernameClaimed": "wizzer",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "ImageShack": {
+      "url": "https://imageshack.com/user/{username}",
+      "urlMain": "https://imageshack.com/",
+      "urlProbe": null,
+      "checkType": "response_url",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1263,
+      "tags": [
+        "photo",
+        "sharing"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "ProductHunt": {
+      "url": "https://www.producthunt.com/@{username}",
+      "urlMain": "https://www.producthunt.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        ":{\"data\":{\"profile\":{\"__typename\""
+      ],
+      "absenceStrs": [
+        "We seem to have lost this page"
+      ],
+      "regexCheck": null,
+      "alexaRank": 1268,
+      "tags": [
+        "apps",
+        "business",
+        "tech"
+      ],
+      "usernameClaimed": "rajiv_ayyangar",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "note": {
+      "url": "https://note.com/{username}",
+      "urlMain": "https://note.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1295,
+      "tags": [
+        "blog",
+        "jp"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "LiveInternet": {
+      "url": "https://www.liveinternet.ru/users/{username}/profile",
+      "urlMain": "https://www.liveinternet.ru",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "/foaf/"
+      ],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1323,
+      "tags": [
+        "ru"
+      ],
+      "usernameClaimed": "marrietta",
+      "usernameUnclaimed": "noonewouldevereverusethis7"
+    },
+    "BuyMeACoffee": {
+      "url": "https://buymeacoff.ee/{username}",
+      "urlMain": "https://www.buymeacoffee.com/",
+      "urlProbe": "https://www.buymeacoffee.com/{username}",
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1329,
+      "tags": [
+        "business",
+        "freelance",
+        "social"
+      ],
+      "usernameClaimed": "red",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Gitea": {
+      "url": "https://gitea.com/{username}",
+      "urlMain": "https://gitea.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1342,
+      "tags": [
+        "apps",
+        "coding",
+        "forum"
+      ],
+      "usernameClaimed": "xorm",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Genius": {
+      "url": "https://genius.com/{username}",
+      "urlMain": "https://genius.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1343,
+      "tags": [
+        "discussion",
+        "music",
+        "social"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "HubPages": {
+      "url": "https://hubpages.com/@{username}",
+      "urlMain": "https://hubpages.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1363,
+      "tags": [
+        "blog",
+        "discussion",
+        "writing"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis"
+    },
+    "Artstation": {
+      "url": "https://www.artstation.com/{username}",
+      "urlMain": "https://www.artstation.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "<meta content=\"noindex, nofollow\" name=\"robots\" />"
+      ],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1372,
+      "tags": [
+        "art",
+        "design",
+        "stock"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Flipboard": {
+      "url": "https://flipboard.com/@{username}",
+      "urlMain": "https://flipboard.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^([a-zA-Z0-9_]){1,15}$",
+      "alexaRank": 1376,
+      "tags": [
+        "news",
+        "sharing",
+        "social",
+        "tech"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewould"
+    },
+    "Pbase": {
+      "url": "https://pbase.com/{username}/profile",
+      "urlMain": "https://pbase.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "Unknown Artist</title>"
+      ],
+      "regexCheck": null,
+      "alexaRank": 1388,
+      "tags": [
+        "art",
+        "photo",
+        "sharing"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Packagist": {
+      "url": "https://packagist.org/packages/{username}/",
+      "urlMain": "https://packagist.org/",
+      "urlProbe": null,
+      "checkType": "response_url",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1392,
+      "tags": [
+        "apps",
+        "coding",
+        "tech"
+      ],
+      "usernameClaimed": "psr",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Geeksfor Geeks": {
+      "url": "https://www.geeksforgeeks.org/profile/{username}",
+      "urlMain": "https://www.geeksforgeeks.org/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "institute_name"
+      ],
+      "absenceStrs": [
+        "<title>undefined   | GeeksforGeeks Profile"
+      ],
+      "regexCheck": null,
+      "alexaRank": 1426,
+      "tags": [
+        "coding",
+        "education",
+        "forum",
+        "in"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "codeberg.org": {
+      "url": "https://codeberg.org/{username}",
+      "urlMain": "https://codeberg.org",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1430,
+      "tags": [
+        "coding",
+        "forum"
+      ],
+      "usernameClaimed": "pcastela",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Habr": {
+      "url": "https://habr.com/ru/users/{username}/",
+      "urlMain": "https://habr.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1475,
+      "tags": [
+        "blog",
+        "discussion",
+        "ru"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Redbubble": {
+      "url": "https://www.redbubble.com/people/{username}",
+      "urlMain": "https://www.redbubble.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1508,
+      "tags": [
+        "art",
+        "shopping",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis77777"
+    },
+    "Diigo": {
+      "url": "https://www.diigo.com/interact_api/load_profile_info?name={username}",
+      "urlMain": "https://www.diigo.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "{}"
+      ],
+      "regexCheck": null,
+      "alexaRank": 1510,
+      "tags": [
+        "archive",
+        "bookmarks",
+        "research"
+      ],
+      "usernameClaimed": "markmark",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Windy": {
+      "url": "https://community.windy.com/user/{username}",
+      "urlMain": "https://windy.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1582,
+      "tags": [
+        "maps",
+        "tech"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Codecanyon": {
+      "url": "https://codecanyon.net/user/{username}",
+      "urlMain": "https://codecanyon.net",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1602,
+      "tags": [
+        "apps",
+        "business",
+        "coding",
+        "shopping"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Minecraft": {
+      "url": "https://api.mojang.com/users/profiles/minecraft/{username}",
+      "urlMain": "https://minecraft.net/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "Couldn't find any profile with name"
+      ],
+      "regexCheck": "^[^\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff]{1,25}$",
+      "alexaRank": 1635,
+      "tags": [
+        "gaming"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Codecademy": {
+      "url": "https://www.codecademy.com/profiles/{username}",
+      "urlMain": "https://www.codecademy.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "Codecademy profile page for"
+      ],
+      "absenceStrs": [
+        "This profile could not be found"
+      ],
+      "regexCheck": null,
+      "alexaRank": 1642,
+      "tags": [
+        "apps",
+        "coding",
+        "education"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "{username}.tilda.ws": {
+      "url": "https://{username}.tilda.ws",
+      "urlMain": "https://tilda.ws",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1648,
+      "tags": [
+        "ru"
+      ],
+      "usernameClaimed": "alex",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "HackerNoon": {
+      "url": "https://hackernoon.com/u/{username}",
+      "urlMain": "https://hackernoon.com",
+      "urlProbe": "https://us-central1-hackernoon-app.cloudfunctions.net/profilesApi/?handle={username}",
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1690,
+      "tags": [
+        "blog",
+        "education",
+        "news",
+        "tech"
+      ],
+      "usernameClaimed": "god",
+      "usernameUnclaimed": "noonewouldeverusethis71"
+    },
+    "PCGamer": {
+      "url": "https://forums.pcgamer.com/members/?username={username}",
+      "urlMain": "https://pcgamer.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "The specified member cannot be found. Please enter a member's entire name."
+      ],
+      "regexCheck": null,
+      "alexaRank": 1727,
+      "tags": [
+        "gaming",
+        "news"
+      ],
+      "usernameClaimed": "admin",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Instapaper": {
+      "url": "https://www.instapaper.com/p/{username}",
+      "urlMain": "https://www.instapaper.com/",
+      "urlProbe": "https://www.instapaper.com/data/profile/{username}",
+      "checkType": "message",
+      "presenseStrs": [
+        "\"is_private\":",
+        "\"is_own_profile\":"
+      ],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1830,
+      "tags": [
+        "apps",
+        "reading",
+        "social"
+      ],
+      "usernameClaimed": "john",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Dreamstime": {
+      "url": "https://www.dreamstime.com/{username}_info",
+      "urlMain": "https://www.dreamstime.com",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1833,
+      "tags": [
+        "art",
+        "photo",
+        "stock"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "OpenSea": {
+      "url": "https://opensea.io/{username}",
+      "urlMain": "https://opensea.io",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1875,
+      "tags": [
+        "art",
+        "crypto",
+        "nft"
+      ],
+      "usernameClaimed": "opensea",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Speakerdeck": {
+      "url": "https://speakerdeck.com/{username}",
+      "urlMain": "https://speakerdeck.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "User Not Found"
+      ],
+      "regexCheck": "^[^\\.]+$",
+      "alexaRank": 1889,
+      "tags": [
+        "education",
+        "sharing"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "WikimapiaProfile": {
+      "url": "http://wikimapia.org/user/{username}",
+      "urlMain": "http://wikimapia.org",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "January 01, 1970"
+      ],
+      "regexCheck": null,
+      "alexaRank": 1911,
+      "tags": [
+        "maps",
+        "ru"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis77777"
+    },
+    "Wattpad": {
+      "url": "https://www.wattpad.com/user/{username}",
+      "urlMain": "https://www.wattpad.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "userError-404"
+      ],
+      "regexCheck": null,
+      "alexaRank": 1920,
+      "tags": [
+        "reading",
+        "social",
+        "writing"
+      ],
+      "usernameClaimed": "Dogstho7951",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Freecodecamp": {
+      "url": null,
+      "urlMain": "https://www.freecodecamp.org/forum/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 1927,
+      "tags": [
+        "coding",
+        "education",
+        "forum"
+      ],
+      "usernameClaimed": "JeremyLT",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Letterboxd": {
+      "url": "https://letterboxd.com/{username}",
+      "urlMain": "https://letterboxd.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "Sorry, we can’t find the page you’ve requested."
+      ],
+      "regexCheck": null,
+      "alexaRank": 2026,
+      "tags": [
+        "movies",
+        "review",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "MyAnimeList": {
+      "url": "https://myanimelist.net/profile/{username}",
+      "urlMain": "https://myanimelist.net/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 2064,
+      "tags": [
+        "anime"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Roblox": {
+      "url": "https://www.roblox.com/user.aspx?username={username}",
+      "urlMain": "https://www.roblox.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "class=\"profile-container\""
+      ],
+      "absenceStrs": [
+        "request-error"
+      ],
+      "regexCheck": null,
+      "alexaRank": 2067,
+      "tags": [
+        "gaming"
+      ],
+      "usernameClaimed": "bluewolfekiller",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Flightradar24": {
+      "url": "https://my.flightradar24.com/{username}",
+      "urlMain": "https://www.flightradar24.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[a-zA-Z0-9_]{3,20}$",
+      "alexaRank": 2164,
+      "tags": [
+        "apps",
+        "maps",
+        "tech",
+        "travel"
+      ],
+      "usernameClaimed": "jebbrooks",
+      "usernameUnclaimed": "xgtrq"
+    },
+    "Max": {
+      "url": "https://max.ru/{username}",
+      "urlMain": "https://max.ru",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "channel:{title:\""
+      ],
+      "absenceStrs": [
+        "Не нашли чат по этой ссылке"
+      ],
+      "regexCheck": null,
+      "alexaRank": 2208,
+      "tags": [
+        "messaging",
+        "ru"
+      ],
+      "usernameClaimed": "ivolk",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "TVTropes": {
+      "url": "https://tvtropes.org/pmwiki/pmwiki.php/Tropers/{username}",
+      "urlMain": "https://tvtropes.org",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[^\\.]+$",
+      "alexaRank": 2347,
+      "tags": [
+        "discussion",
+        "wiki"
+      ],
+      "usernameClaimed": "Chabal2",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Tistory": {
+      "url": "https://{username}.tistory.com/",
+      "urlMain": "https://www.tistory.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 2431,
+      "tags": [
+        "blog",
+        "kr"
+      ],
+      "usernameClaimed": "notice",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "JSFiddle": {
+      "url": "https://jsfiddle.net/u/{username}/",
+      "urlMain": "https://jsfiddle.net",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 2472,
+      "tags": [
+        "apps",
+        "coding",
+        "sharing",
+        "tech"
+      ],
+      "usernameClaimed": "john",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "GamesRadar": {
+      "url": "https://www.gamesradar.com/uk/author/{username}/",
+      "urlMain": "https://www.gamesradar.com",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 2489,
+      "tags": [
+        "forum",
+        "gaming",
+        "news"
+      ],
+      "usernameClaimed": "jordan-gerblick",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "TechSpot": {
+      "url": null,
+      "urlMain": "http://www.techspot.com/community/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 2509,
+      "tags": [
+        "forum",
+        "news",
+        "tech"
+      ],
+      "usernameClaimed": "alex",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Geocaching": {
+      "url": "https://www.geocaching.com/p/?u={username}",
+      "urlMain": "https://www.geocaching.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 2512,
+      "tags": [
+        "hobby"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Gog": {
+      "url": "https://www.gog.com/u/{username}",
+      "urlMain": "https://www.gog.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[^\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff]+$",
+      "alexaRank": 2557,
+      "tags": [
+        "gaming"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Coub": {
+      "url": "https://coub.com/{username}",
+      "urlMain": "https://coub.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 2621,
+      "tags": [
+        "sharing",
+        "social",
+        "video"
+      ],
+      "usernameClaimed": "bestcoubs",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Keybase": {
+      "url": "https://keybase.io/{username}",
+      "urlMain": "https://keybase.io/",
+      "urlProbe": "https://keybase.io/_/api/1.0/user/lookup.json?usernames={username}",
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "them\":[null]",
+        "bad list value"
+      ],
+      "regexCheck": null,
+      "alexaRank": 2645,
+      "tags": [
+        "business",
+        "crypto",
+        "messaging"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "beacons.ai": {
+      "url": "https://beacons.ai/{username}",
+      "urlMain": "https://beacons.ai",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "https://cdn.beacons.ai/profile_pictures"
+      ],
+      "absenceStrs": [
+        "https://beacons.ai/bw_logo_full.png"
+      ],
+      "regexCheck": null,
+      "alexaRank": 2680,
+      "tags": [
+        "apps",
+        "links",
+        "social"
+      ],
+      "usernameClaimed": "pasteljellies",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "IFTTT": {
+      "url": "https://www.ifttt.com/p/{username}",
+      "urlMain": "https://www.ifttt.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[A-Za-z0-9]{3,35}$",
+      "alexaRank": 2740,
+      "tags": [
+        "apps",
+        "tech"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Odysee": {
+      "url": "https://odysee.com/@{username}",
+      "urlMain": "https://odysee.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "<link rel=\"canonical\" href=\"https://odysee.com/@"
+      ],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 2842,
+      "tags": [
+        "social",
+        "streaming",
+        "video"
+      ],
+      "usernameClaimed": "Odysee",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Taplink": {
+      "url": "https://taplink.cc/{username}",
+      "urlMain": "https://taplink.cc/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "at Taplink"
+      ],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 2850,
+      "tags": [
+        "business",
+        "links",
+        "social"
+      ],
+      "usernameClaimed": "adidas",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Freelancer.com": {
+      "url": "https://www.freelancer.com/api/users/0.1/users?usernames%5B%5D={username}&compact=true",
+      "urlMain": "https://www.freelancer.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "\"users\":{}"
+      ],
+      "regexCheck": null,
+      "alexaRank": 2862,
+      "tags": [
+        "business",
+        "freelance"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis"
+    },
+    "Donorbox": {
+      "url": "https://donorbox.org/{username}",
+      "urlMain": "https://donorbox.org",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 2873,
+      "tags": [
+        "finance"
+      ],
+      "usernameClaimed": "theabbie",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Hack MD": {
+      "url": "https://hackmd.io/@{username}",
+      "urlMain": "https://hackmd.io/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        " - HackMD</title>"
+      ],
+      "absenceStrs": [
+        "<title>404 Not Found - HackMD</title>"
+      ],
+      "regexCheck": null,
+      "alexaRank": 2877,
+      "tags": [
+        "coding",
+        "tech"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "iNaturalist": {
+      "url": "https://www.inaturalist.org/people/{username}",
+      "urlMain": "https://www.inaturalist.org",
+      "urlProbe": "https://api.inaturalist.org/v1/users/{username}",
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 2885,
+      "tags": [
+        "hobby",
+        "science"
+      ],
+      "usernameClaimed": "kueda",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Venmo": {
+      "url": "https://venmo.com/{username}",
+      "urlMain": "https://venmo.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 2947,
+      "tags": [
+        "finance",
+        "fintech",
+        "us"
+      ],
+      "usernameClaimed": "jenny",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Teletype": {
+      "url": "https://teletype.in/@{username}",
+      "urlMain": "https://teletype.in",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 2989,
+      "tags": [
+        "ru",
+        "writing"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Steemit": {
+      "url": "https://steemit.com/@{username}",
+      "urlMain": "https://steemit.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "profile",
+        " username"
+      ],
+      "absenceStrs": [
+        "NotFound__menu"
+      ],
+      "regexCheck": null,
+      "alexaRank": 3000,
+      "tags": [
+        "blog",
+        "crypto",
+        "news",
+        "social"
+      ],
+      "usernameClaimed": "apiprincz",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "CTAN": {
+      "url": "https://ctan.org/author/{username}",
+      "urlMain": "https://ctan.org/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 3081,
+      "tags": [
+        "archive",
+        "coding",
+        "education"
+      ],
+      "usernameClaimed": "briggs",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "OpenCollective": {
+      "url": "https://opencollective.com/{username}",
+      "urlMain": "https://opencollective.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 3098,
+      "tags": [
+        "business",
+        "coding",
+        "finance"
+      ],
+      "usernameClaimed": "sindresorhus",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "DailyKos": {
+      "url": "https://www.dailykos.com/user/{username}",
+      "urlMain": "https://www.dailykos.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "bp-personal-tab"
+      ],
+      "absenceStrs": [
+        "bp-nouveau error404"
+      ],
+      "regexCheck": null,
+      "alexaRank": 3110,
+      "tags": [
+        "news",
+        "us"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Mix": {
+      "url": "https://mix.com/{username}",
+      "urlMain": "https://mix.com",
+      "urlProbe": null,
+      "checkType": "response_url",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 3181,
+      "tags": [
+        "blog",
+        "links",
+        "sharing",
+        "social"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Giantbomb": {
+      "url": "https://www.giantbomb.com/profile/{username}",
+      "urlMain": "https://www.giantbomb.com",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 3189,
+      "tags": [
+        "forum",
+        "gaming",
+        "news"
+      ],
+      "usernameClaimed": "green",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "jAlbum.net": {
+      "url": "https://{username}.jalbum.net/",
+      "urlMain": "https://jalbum.net",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[^\\.]+$",
+      "alexaRank": 3315,
+      "tags": [
+        "hobby",
+        "photo",
+        "sharing"
+      ],
+      "usernameClaimed": "laza",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Newgrounds": {
+      "url": "https://{username}.newgrounds.com",
+      "urlMain": "https://newgrounds.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "user-header-name"
+      ],
+      "absenceStrs": [
+        "icon-steam"
+      ],
+      "regexCheck": null,
+      "alexaRank": 3371,
+      "tags": [
+        "art",
+        "forum",
+        "gaming"
+      ],
+      "usernameClaimed": "john",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Slides": {
+      "url": "https://slides.com/{username}",
+      "urlMain": "https://slides.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 3412,
+      "tags": [
+        "apps",
+        "business",
+        "design",
+        "sharing"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Ultimate-Guitar": {
+      "url": "https://ultimate-guitar.com/u/{username}",
+      "urlMain": "https://ultimate-guitar.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 3428,
+      "tags": [
+        "education",
+        "forum",
+        "music"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "ChaturBate": {
+      "url": "https://chaturbate.com/{username}/",
+      "urlMain": "https://chaturbate.com",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 3611,
+      "tags": [
+        "porn",
+        "streaming",
+        "video",
+        "webcam"
+      ],
+      "usernameClaimed": "cute18cute",
+      "usernameUnclaimed": "noonewouldeverusethis77777"
+    },
+    "HackerOne": {
+      "url": "https://hackerone.com/{username}",
+      "urlMain": "https://hackerone.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 3645,
+      "tags": [
+        "coding",
+        "hacking",
+        "tech"
+      ],
+      "usernameClaimed": "nahamsec",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Contently": {
+      "url": "https://{username}.contently.com/",
+      "urlMain": "https://contently.com/",
+      "urlProbe": null,
+      "checkType": "response_url",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 4103,
+      "tags": [
+        "business",
+        "freelance"
+      ],
+      "usernameClaimed": "jordanteicher",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "MyMiniFactory": {
+      "url": "https://www.myminifactory.com/users/{username}",
+      "urlMain": "https://www.myminifactory.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 4152,
+      "tags": [
+        "3d",
+        "art",
+        "design",
+        "shopping"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "CreativeMarket": {
+      "url": "https://creativemarket.com/users/{username}",
+      "urlMain": "https://creativemarket.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "Likes"
+      ],
+      "absenceStrs": [
+        "Whoomp, there it isn't...",
+        "It looks like the page you’re looking for is no longer available. "
+      ],
+      "regexCheck": null,
+      "alexaRank": 4285,
+      "tags": [
+        "art",
+        "business",
+        "design",
+        "stock"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "OpenSource": {
+      "url": "https://opensource.com/users/{username}",
+      "urlMain": "https://opensource.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 4335,
+      "tags": [
+        "coding",
+        "education",
+        "tech"
+      ],
+      "usernameClaimed": "seth",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Couchsurfing": {
+      "url": "https://www.couchsurfing.com/people/{username}",
+      "urlMain": "https://www.couchsurfing.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 4350,
+      "tags": [
+        "networking",
+        "social",
+        "travel"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Imgflip": {
+      "url": "https://imgflip.com/user/{username}",
+      "urlMain": "https://imgflip.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "u-username",
+        "user-page",
+        "user-title",
+        "user-panel",
+        "user-joined"
+      ],
+      "absenceStrs": [
+        "\t\t<h1>404 Page Not Found</h1>\r",
+        "<title>404 Page Not Found</title>\r",
+        "info-page ibox",
+        "\t\t<p>Or maybe the <a href=",
+        "\t\t<p>Were you looking for the <a href="
+      ],
+      "regexCheck": null,
+      "alexaRank": 4416,
+      "tags": [
+        "art",
+        "photo",
+        "sharing",
+        "social"
+      ],
+      "usernameClaimed": "sparkles99",
+      "usernameUnclaimed": "hrypxleske"
+    },
+    "Hackaday": {
+      "url": "https://hackaday.io/{username}",
+      "urlMain": "https://hackaday.io/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 4424,
+      "tags": [
+        "forum",
+        "hobby",
+        "tech"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis"
+    },
+    "AnimeNewsNetwork": {
+      "url": "https://www.animenewsnetwork.com/bbs/phpBB2/profile.php?mode=viewprofile&u={username}",
+      "urlMain": "https://www.animenewsnetwork.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "Could not find expected value in database"
+      ],
+      "regexCheck": null,
+      "alexaRank": 4452,
+      "tags": [
+        "anime",
+        "forum",
+        "news"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "LibraryThing": {
+      "url": "https://www.librarything.com/profile/{username}",
+      "urlMain": "https://www.librarything.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "<p>Error: This user doesn't exist</p>"
+      ],
+      "regexCheck": null,
+      "alexaRank": 4462,
+      "tags": [
+        "books",
+        "reading",
+        "social"
+      ],
+      "usernameClaimed": "Joeylynn_M_Arkels",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Fodors": {
+      "url": "https://www.fodors.com/community/profile/{username}/forum-activity",
+      "urlMain": "https://www.fodors.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "user_create_date",
+        "user_link_wrapper"
+      ],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 4466,
+      "tags": [
+        "travel"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Designs99": {
+      "url": "https://99designs.com/profiles/{username}",
+      "urlMain": "https://99designs.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "profileUrl"
+      ],
+      "absenceStrs": [
+        "mobile-only"
+      ],
+      "regexCheck": null,
+      "alexaRank": 4509,
+      "tags": [
+        "business",
+        "design",
+        "freelance",
+        "photo"
+      ],
+      "usernameClaimed": "t6s",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Periscope": {
+      "url": "https://www.pscp.tv/{username}",
+      "urlMain": "https://www.pscp.tv",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "profile",
+        "ProfileAuthor",
+        "ProfileUsername"
+      ],
+      "absenceStrs": [
+        "error-fill"
+      ],
+      "regexCheck": null,
+      "alexaRank": 4547,
+      "tags": [
+        "social",
+        "streaming",
+        "video"
+      ],
+      "usernameClaimed": "moonlitraven",
+      "usernameUnclaimed": "higfjqmiez"
+    },
+    "Freesound": {
+      "url": "https://freesound.org/people/{username}/",
+      "urlMain": "https://freesound.org/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 4559,
+      "tags": [
+        "archive",
+        "music",
+        "sharing"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis"
+    },
+    "Metal-archives": {
+      "url": "https://www.metal-archives.com/users/{username}",
+      "urlMain": "https://www.metal-archives.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "Points:"
+      ],
+      "absenceStrs": [
+        "User not found"
+      ],
+      "regexCheck": null,
+      "alexaRank": 4573,
+      "tags": [
+        "archive",
+        "forum",
+        "music"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Kongregate": {
+      "url": "https://www.kongregate.com/accounts/{username}",
+      "urlMain": "https://www.kongregate.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "Sorry, no account with that name was found."
+      ],
+      "regexCheck": "^[a-zA-Z][a-zA-Z0-9_-]*$",
+      "alexaRank": 4591,
+      "tags": [
+        "gaming"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "AlternativeTo": {
+      "url": "https://alternativeto.net/user/{username}",
+      "urlMain": "https://alternativeto.net/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": "^[^\\.]+$",
+      "alexaRank": 4645,
+      "tags": [
+        "apps",
+        "discussion",
+        "tech"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Pikabu": {
+      "url": "https://pikabu.ru/@{username}",
+      "urlMain": "https://pikabu.ru/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 4911,
+      "tags": [
+        "ru",
+        "sharing",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Lichess": {
+      "url": "https://lichess.org/@/{username}",
+      "urlMain": "https://lichess.org",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "us_profile",
+        "og:title",
+        "profile-side",
+        " data-username=",
+        "og:site_name"
+      ],
+      "absenceStrs": [
+        "page-small box box-pad page",
+        "><h1 class=",
+        ">No such player</h1><div><p>This username doesn",
+        "})()</script></body></html>",
+        "IR0Cf7qpkpcOhvI9r03a0QbI"
+      ],
+      "regexCheck": null,
+      "alexaRank": 4926,
+      "tags": [
+        "gaming",
+        "hobby"
+      ],
+      "usernameClaimed": "adam",
+      "usernameUnclaimed": "efxvyhnwrh"
+    },
+    "Speedrun.com": {
+      "url": "https://speedrun.com/users/{username}",
+      "urlMain": "https://speedrun.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "\"user\":{\"id\":\""
+      ],
+      "absenceStrs": [
+        "Not found - Speedrun"
+      ],
+      "regexCheck": null,
+      "alexaRank": 4985,
+      "tags": [
+        "gaming"
+      ],
+      "usernameClaimed": "3Tau",
+      "usernameUnclaimed": "noonewould"
+    },
+    "Boosty": {
+      "url": "https://boosty.to/{username}",
+      "urlMain": "https://boosty.to",
+      "urlProbe": "https://api.boosty.to/v1/blog/{username}",
+      "checkType": "message",
+      "presenseStrs": [
+        "\"id\":"
+      ],
+      "absenceStrs": [
+        "blog_not_found"
+      ],
+      "regexCheck": null,
+      "alexaRank": 5124,
+      "tags": [
+        "ru"
+      ],
+      "usernameClaimed": "soxoj",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Soup": {
+      "url": "https://www.soup.io/author/{username}",
+      "urlMain": "https://soup.io",
+      "urlProbe": null,
+      "checkType": "response_url",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 5210,
+      "tags": [
+        "blog",
+        "sharing",
+        "social"
+      ],
+      "usernameClaimed": "cristina",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Hackster": {
+      "url": "https://www.hackster.io/{username}",
+      "urlMain": "https://www.hackster.io",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 5250,
+      "tags": [
+        "education",
+        "hobby",
+        "tech"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Xvideos": {
+      "url": "https://xvideos.com/profiles/{username}",
+      "urlMain": "https://xvideos.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 5368,
+      "tags": [
+        "porn"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Fur Affinity": {
+      "url": "https://www.furaffinity.net/gallery/{username}",
+      "urlMain": "https://www.furaffinity.net",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "og:title",
+        "display:flex",
+        "user-title",
+        " /><i title=",
+        "Beach Day"
+      ],
+      "absenceStrs": [
+        ">The username ",
+        " could not be found.</div>",
+        "standardpage",
+        "redirect-message",
+        "section-body alignleft"
+      ],
+      "regexCheck": null,
+      "alexaRank": 5507,
+      "tags": [
+        "art",
+        "hobby",
+        "social"
+      ],
+      "usernameClaimed": "astrid7",
+      "usernameUnclaimed": "djmgizlhqb"
+    },
+    "Hashnode": {
+      "url": "https://hashnode.com/@{username}",
+      "urlMain": "https://hashnode.com",
+      "urlProbe": "https://gql.hashnode.com?query=%7Buser(username%3A%20%22{username}%22)%20%7B%20name%20username%20%7D%7D",
+      "checkType": "message",
+      "presenseStrs": [
+        "\"username\""
+      ],
+      "absenceStrs": [
+        "\"user\":null"
+      ],
+      "regexCheck": null,
+      "alexaRank": 5580,
+      "tags": [
+        "blog",
+        "coding",
+        "tech",
+        "writing"
+      ],
+      "usernameClaimed": "melwinalm",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "ItemFix": {
+      "url": "https://www.itemfix.com/c/{username}",
+      "urlMain": "https://www.itemfix.com",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [
+        "user_token"
+      ],
+      "absenceStrs": [
+        "<title>ItemFix - Channel: </title>"
+      ],
+      "regexCheck": null,
+      "alexaRank": 5611,
+      "tags": [
+        "sharing",
+        "social",
+        "video"
+      ],
+      "usernameClaimed": "William_Pickton",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "AllMyLinks": {
+      "url": "https://allmylinks.com/{username}",
+      "urlMain": "https://allmylinks.com/",
+      "urlProbe": null,
+      "checkType": "message",
+      "presenseStrs": [],
+      "absenceStrs": [
+        "Page not found"
+      ],
+      "regexCheck": null,
+      "alexaRank": 5629,
+      "tags": [
+        "links",
+        "social"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Nintendo Life": {
+      "url": "https://www.nintendolife.com/users/{username}",
+      "urlMain": "https://www.nintendolife.com/",
+      "urlProbe": null,
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": 5670,
+      "tags": [
+        "gaming"
+      ],
+      "usernameClaimed": "goku",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "HackerNews": {
+      "url": "https://news.ycombinator.com/user?id={username}",
+      "urlMain": "https://news.ycombinator.com/",
+      "urlProbe": "https://hacker-news.firebaseio.com/v0/user/{username}.json?shallow=true",
+      "checkType": "message",
+      "presenseStrs": [
+        "\"created\""
+      ],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": null,
+      "tags": [
+        "discussion",
+        "news",
+        "tech"
+      ],
+      "usernameClaimed": "pg",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    },
+    "Docker Hub": {
+      "url": "https://hub.docker.com/u/{username}/",
+      "urlMain": "https://hub.docker.com/",
+      "urlProbe": "https://hub.docker.com/v2/users/{username}/",
+      "checkType": "status_code",
+      "presenseStrs": [],
+      "absenceStrs": [],
+      "regexCheck": null,
+      "alexaRank": null,
+      "tags": [
+        "apps",
+        "coding",
+        "tech"
+      ],
+      "usernameClaimed": "blue",
+      "usernameUnclaimed": "noonewouldeverusethis7"
+    }
+  }
+}

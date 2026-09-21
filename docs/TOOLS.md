@@ -2,9 +2,9 @@
 
 | Area | Tools / services |
 |------|------------------|
-| Username | **Instant Username** ([UI](https://instantusername.com/) + `tools/instant_username.py` / WhatsMyName), Sherlock, Maigret |
+| Username | **Instant Username** ([UI](https://instantusername.com/) + `tools/instant_username.py` / WhatsMyName), **Maigret** (`tools/maigret_cli.py` + [soxoj/maigret](https://github.com/soxoj/maigret)), Sherlock |
 | Reddit archives | **Rosint-style** (`tools/rosint_reddit.py` → Arctic Shift + PullPush; UI [rosint.dev](https://www.rosint.dev/)) |
-| Username pivot | `tools/username_osint.py` — InstantUsername + Rosint first; **OSINT Industries** when API key present |
+| Username pivot | `tools/username_osint.py` — InstantUsername → Maigret → Rosint; **OSINT Industries** when API key present |
 | Email | Holehe, GHunt, Epieos, **OSINT Industries (API)**, NeutrOSINT |
 | Image | Yandex / Bing / Google Lens, TinEye, ExifTool, AperiSolve, GeoSpy |
 | Stego | AperiSolve, binwalk, steghide, zsteg, ZIP-in-image checks |
