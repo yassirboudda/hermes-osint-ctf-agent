@@ -17,11 +17,16 @@ Techniques only — no personal cookies, tokens, or private message history.
 - `robots.txt` → unexpected paths; Apache `server-status` sometimes **lists** sensitive dirs (if already exposed — do not fuzz for it).
 - Strategic PDFs / NDAs / SDA contracts: search articles on “alternative transfer”, export control, IP assignment.
 - National law portals (`.gouv.*`): minerals export, intelligence cooperation duties, patent offices.
+- WordPress soft author enum: `/?author=1..N` (low IDs only) can reveal site creator — **not** directory fuzzing.
+- Corporate carousels: prefer **view-source** over counting animated slides.
 
 ## People & influence
 - Think-tank façade ↔ darknet messenger: creds from OSINT (sticky notes OCR → ASCII, social bios), never bruteforce login.
 - Official title on government page beats “also advises …” blurbs on university sites.
 - Threat emails: parse `Received` / `X-Originating-IP` → infra → civil registry / company registry.
+- LinkedIn **past roles** often answer “before joining X…” better than the company site.
+- Mastodon (or other fedi) + Wayback can unmask a Twitter/X persona.
+- Google Docs share dialog can leak the owner email (open share UI — do not send the request).
 
 ## Handles / Reddit
 - Username lead → Instant Username–style sweep → **Maigret** (tags / permute) → Rosint archive (deleted/private Reddit) **before** burning paid quota.
@@ -32,6 +37,11 @@ Techniques only — no personal cookies, tokens, or private message history.
 ## Money & chain
 - Testnet ETH memos (UTF-8 input data) can name payers / invoice refs.
 - Faucet → intermediary → target; flag may be in the **memo**, not the address.
+- Follow incoming txs on the payer wallet for entity name + reference codes.
+
+## Deep Threats official write-up (corpus)
+- Full text + PDF + technique table: `skills/osint-ctf-corpus/wu-deep-threats-*`
+- Digest index: Batch 7 in `skills/writeups-digest.md`
 
 ## CTFd hygiene
 - Session cookie lets you inventory challenges; wrong submits cost points.

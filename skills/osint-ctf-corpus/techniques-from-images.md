@@ -1,6 +1,6 @@
 # Techniques & outils — digest vision + write-ups
 
-Corpus pré-analysé pour Hackinator (économie tokens). Sources : APT Hunter, HEXA OSINT CTF V3, Synoslabs GEOINT quizzes, Cody Bernardy challenges, Gralhix OSINT exercises 001–010, Hacktoria, Mirai/Legacy WUs, Oscar Zulu (texte), NeutrOSINT.
+Corpus pré-analysé pour Hackinator (économie tokens). Sources : APT Hunter, HEXA OSINT CTF V3, Synoslabs GEOINT quizzes, Cody Bernardy challenges, Gralhix OSINT exercises 001–010, Hacktoria, Mirai/Legacy WUs, Oscar Zulu (texte), NeutrOSINT, **Deep Threats write-up officiel**.
 
 > Flags d’autres CTF = exemples de méthodo uniquement — **jamais** à coller sur Deep Threats.  
 > **Règle tokens :** lire `images-digest.md` + ce fichier — **ne jamais** demander à DeepSeek d’analyser les PNG/JPG bruts.
@@ -23,8 +23,11 @@ Corpus pré-analysé pour Hackinator (économie tokens). Sources : APT Hunter, H
 | **WhatsMyName Web** | Enum username multi-sites (ex. `_Tr0tsk1` → Twitter) |
 | Sherlock / Maigret | Complément username |
 | Twitter/X, Instagram, Facebook Pages | Bios, highlights, emails, logos → reverse image |
-| LinkedIn | Emploi / historique / posts → Pastebin / GitHub |
+| LinkedIn | Emploi / historique / posts → Pastebin / GitHub ; **past experience** souvent = flag |
+| Mastodon + Wayback | Pseudo X → Mastodon → snapshot profil ancien révèle identité |
+| Reddit / Rosint | Parcours univ, mentor, docs partagés |
 | ProtonMail (`@proton.me`) | Pivot privacy-mail fréquent |
+| Google Docs (share UI) | Email auteur visible dans dialogue de partage (sans envoyer) |
 
 ### Archives / web history
 | Outil | Usage |
