@@ -31,7 +31,7 @@ def remaining() -> int:
     return max(0, MAX_LOOKUPS - int(_load().get("count", 0)))
 
 
-def consume(query: str) -> None:
+def consume(query: str, *, quiet: bool = False) -> None:
     data = _load()
     if int(data.get("count", 0)) >= MAX_LOOKUPS:
         raise SystemExit(
@@ -40,7 +40,8 @@ def consume(query: str) -> None:
     data["count"] = int(data.get("count", 0)) + 1
     data.setdefault("events", []).append({"ts": time.time(), "query": query[:200]})
     _save(data)
-    print(f"ok lookups={data['count']}/{MAX_LOOKUPS} remaining={remaining()}")
+    if not quiet:
+        print(f"ok lookups={data['count']}/{MAX_LOOKUPS} remaining={remaining()}")
 
 
 if __name__ == "__main__":

@@ -10,7 +10,7 @@ Designed to run with **DeepSeek** as the orchestrator and **OpenRouter** sub-age
 ## What you get
 
 - Skills & knowledge for OSINT CTF methodology (archives, SOCMINT, GEOINT, stego, mail headers, on-chain testnets, legal docs in fictional nations, etc.)
-- Tooling stubs: CTFd session client, OSINTMapper API control, OSINT Industries (API key), captcha solvers, Apify / Browser-Use hooks
+- Tooling stubs: CTFd session client, OSINTMapper API control, OSINT Industries (API key), **Rosint-style Reddit archives**, **Instant Username–style** multi-site search, captcha solvers, Apify / Browser-Use hooks
 - Hard **OPSEC** rules (dedicated UA, no fuzz, soft crawl) — learned the hard way
 - Corpus of public OSINT write-up digests for technique recall
 
@@ -37,6 +37,12 @@ pip install -r requirements.txt
 # Examples (read-only by default)
 python3 tools/ctfd_cli.py list          # needs CTFD_* in .env
 python3 tools/osintmapper_cli.py status # needs OSINTMAPPER_* in .env
+
+# Username / Reddit (no paid key required)
+python3 tools/username_osint.py pivot some_handle
+python3 tools/rosint_reddit.py user some_handle          # like https://www.rosint.dev/?u=…
+python3 tools/instant_username.py search some_handle     # like https://instantusername.com/?q=…
+# OSINT Industries still used when OSINT_INDUSTRIES_API_KEY is set
 ```
 
 Wire this folder as the skill/knowledge root of your Hermes / Cursor / custom agent runtime.
