@@ -51,7 +51,8 @@ Wire this folder as the skill/knowledge root of your Hermes / Cursor / custom ag
 
 See `.env.example` for the full list. Typical stack:
 
-- **OSINT Industries** — API key ([docs](https://api.osint.industries/misc/docs))
+- **OSINT Industries** — API key ([docs](https://api.osint.industries/misc/docs)); used when set, skipped when absent
+- **Rosint / Instant Username** — no keys; `tools/rosint_reddit.py` + `tools/instant_username.py` (UI twins: [rosint.dev](https://www.rosint.dev/), [instantusername.com](https://instantusername.com/))
 - **Mailbox** — dedicated CTF mailbox (+ OAuth refresh if Gmail)
 - **Captcha** — CapSolver and/or 2Captcha
 - **Browser automation** — Browser-Use pool and/or Apify actors
