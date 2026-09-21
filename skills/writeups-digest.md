@@ -39,6 +39,12 @@ Corpus : `wu2-osint-exercise-*`, `wu3-osint-exercise-*`, `wu*-hacktoria-*`, `wu3
 | Cake indoor / filetype / AFG maps / SS IDP / Wagner / eagle / Balakliya | `wu5-*` | branding indoor, dorks, reference maps, FB movement, traffic Maps |
 | TweetDeck / Lists / geoblock / Earth-only / UA GEOINT | `wu6-*` | colonnes TweetDeck, lists X, Wayback geoblock, Earth Pro, SV Cyrillic |
 
+## Batch 7 — Deep Threats (write-up officiel)
+
+| Source | Fichiers | Patterns |
+|--------|----------|----------|
+| Deep Threats correction PDF | `wu-deep-threats-writeup.md`, `wu-deep-threats-writeup.pdf`, `wu-deep-threats-techniques.md` | LinkedIn past roles ; X+Mastodon+Wayback ; view-source carousel ; Sepolia Etherscan memos ; Reddit/Rosint parcours ; Docs share→email ; WP `?author=` soft ; Shodan→onion ; sticky ASCII ; wiki/cartes nation fiction ; brevets & lois `.gouv` |
+
 ---
 
 ## Archival Hunt (rappel obligatoire)
