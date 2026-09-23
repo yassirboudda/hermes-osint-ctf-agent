@@ -2,6 +2,7 @@
 
 | Area | Tools / services |
 |------|------------------|
+| LLM providers | **DeepSeek**, **OpenRouter**, **Nous Research / Hermes** (`tools/llm_providers.py`; keys in `.env`; portal [portal.nousresearch.com](https://portal.nousresearch.com)) |
 | Username | **Instant Username** ([UI](https://instantusername.com/) + `tools/instant_username.py` / WhatsMyName), **Maigret** (`tools/maigret_cli.py` + [soxoj/maigret](https://github.com/soxoj/maigret)), Sherlock |
 | Reddit archives | **Rosint-style** (`tools/rosint_reddit.py` → Arctic Shift + PullPush; UI [rosint.dev](https://www.rosint.dev/)) |
 | Username pivot | `tools/username_osint.py` — InstantUsername → Maigret → Rosint; **OSINT Industries** when API key present |

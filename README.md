@@ -5,8 +5,9 @@
 <h1 align="center">Hermes OSINT CTF Agent</h1>
 
 <p align="center">
-  Open-source <b>OSINT CTF agent template</b> — DeepSeek orchestrator + OpenRouter sub-agents.<br/>
-  Soft crawl · archives · username pivots · CTFd / OSINTMapper hooks.
+  Open-source <b>OSINT CTF agent template</b> — pluggable LLM providers (DeepSeek · OpenRouter · Nous Hermes).<br/>
+  Soft crawl · archives · username pivots · CTFd / OSINTMapper hooks.<br/>
+  LLM providers: <b>DeepSeek</b> · <b>OpenRouter</b> · <b>Nous Research (Hermes)</b>.
 </p>
 
 <p align="center">
@@ -17,8 +18,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/DeepSeek-orchestrator-4f46e5?style=flat-square&labelColor=111827" alt="DeepSeek" />
-  <img src="https://img.shields.io/badge/OpenRouter-sub--agents-10b981?style=flat-square&labelColor=111827" alt="OpenRouter" />
+  <img src="https://img.shields.io/badge/DeepSeek-provider-4f46e5?style=flat-square&labelColor=111827" alt="DeepSeek" />
+  <img src="https://img.shields.io/badge/OpenRouter-provider-10b981?style=flat-square&labelColor=111827" alt="OpenRouter" />
+  <a href="https://portal.nousresearch.com"><img src="https://img.shields.io/badge/Nous%20Research-Hermes%20API-f43f5e?style=flat-square&labelColor=111827" alt="Nous Research" /></a>
   <a href="https://www.rosint.dev/"><img src="https://img.shields.io/badge/Rosint-Reddit%20archives-ff4500?style=flat-square&labelColor=111827" alt="Rosint" /></a>
   <a href="https://instantusername.com/"><img src="https://img.shields.io/badge/InstantUsername-pivots-06b6d4?style=flat-square&labelColor=111827" alt="Instant Username" /></a>
   <a href="https://github.com/soxoj/maigret"><img src="https://img.shields.io/badge/Maigret-5900%2B%20sites-e11d48?style=flat-square&labelColor=111827&logo=github" alt="Maigret" /></a>
@@ -56,12 +58,31 @@ python3 tools/username_osint.py pivot some_handle
 
 ## Models
 
-| Role | Provider | Model |
-|------|----------|--------|
-| Main agent (orchestrator) | DeepSeek | DeepSeek V4 / V4.1 (or current flagship) |
-| Sub-agents | OpenRouter | **Any** model the DeepSeek orchestrator selects (Kimi, Claude, GPT, Gemini, Grok, …) |
+Pick **any** of these OpenAI-compatible providers for orchestrator and/or sub-agents:
 
-Configure in `config/models.yaml` and `.env`.
+| Provider | Key (`.env`) | Base URL | Typical models |
+|----------|--------------|----------|----------------|
+| **DeepSeek** | `DEEPSEEK_API_KEY` | `https://api.deepseek.com` | `deepseek-chat`, `deepseek-reasoner` |
+| **OpenRouter** | `OPENROUTER_API_KEY` | `https://openrouter.ai/api/v1` | Any OpenRouter slug |
+| **Nous Research (Hermes)** | `NOUS_API_KEY` from [portal.nousresearch.com](https://portal.nousresearch.com) | `https://inference-api.nousresearch.com/v1` | `Hermes-4.3-36B`, `Hermes-4-70B`, `Hermes-4-405B` |
+
+```bash
+# .env — examples
+ORCHESTRATOR_PROVIDER=deepseek          # or openrouter | nousresearch
+SUBAGENT_PROVIDER=openrouter            # or nousresearch | deepseek
+
+# All-Nous Hermes stack:
+# ORCHESTRATOR_PROVIDER=nousresearch
+# SUBAGENT_PROVIDER=nousresearch
+# NOUS_API_KEY=sk-...
+# NOUS_MODEL=Hermes-4-70B
+
+python3 tools/llm_providers.py status
+python3 tools/llm_providers.py resolve --role orchestrator
+# python3 tools/llm_providers.py chat "ping" --provider nousresearch
+```
+
+Configure defaults in `config/models.yaml`. Portal API docs: https://portal.nousresearch.com/api-docs
 
 ## Quick start
 
@@ -112,6 +133,7 @@ Bundled curated site DB: [`data/maigret_subset.json`](data/maigret_subset.json) 
 
 See `.env.example` for the full list. Typical stack:
 
+- **LLM providers** (pick any mix) — DeepSeek, OpenRouter, and/or **Nous Research Hermes** (`NOUS_API_KEY` from [portal.nousresearch.com](https://portal.nousresearch.com); see `docs/PROVIDERS.md`)
 - **OSINT Industries** — API key ([docs](https://api.osint.industries/misc/docs)); used when set, skipped when absent
 - **Rosint / Instant Username / Maigret** — no keys for free path; optional `pip install maigret` for full engine
 - **Mailbox** — dedicated CTF mailbox (+ OAuth refresh if Gmail)

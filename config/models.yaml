@@ -1,20 +1,76 @@
+# LLM providers — DeepSeek | OpenRouter | Nous Research (Hermes)
+#
+# Users pick providers in .env (see .env.example):
+#   ORCHESTRATOR_PROVIDER=deepseek|openrouter|nousresearch
+#   SUBAGENT_PROVIDER=openrouter|nousresearch|deepseek
+#
+# Nous Portal: create an API key at https://portal.nousresearch.com
+# Inference (OpenAI-compatible): https://inference-api.nousresearch.com/v1
+# Docs: https://portal.nousresearch.com/api-docs
+
+providers:
+  deepseek:
+    label: DeepSeek
+    api_key_env: DEEPSEEK_API_KEY
+    base_url_env: DEEPSEEK_BASE_URL
+    default_base_url: https://api.deepseek.com
+    # DeepSeek chat API is OpenAI-compatible under /v1
+    default_model: deepseek-chat
+    models:
+      - deepseek-chat
+      - deepseek-reasoner
+    notes: Official DeepSeek API — strong default orchestrator.
+
+  openrouter:
+    label: OpenRouter
+    api_key_env: OPENROUTER_API_KEY
+    base_url_env: OPENROUTER_BASE_URL
+    default_base_url: https://openrouter.ai/api/v1
+    default_model_env: OPENROUTER_DEFAULT_MODEL
+    default_model: openrouter/auto
+    # Orchestrator / sub-agents may pick ANY OpenRouter model, e.g.:
+    # moonshotai/kimi-k2, anthropic/claude-sonnet-4, openai/gpt-5,
+    # google/gemini-2.5-pro, x-ai/grok-4, nousresearch/hermes-4-405b
+    notes: Multi-model gateway — ideal for sub-agents / vision / long context.
+
+  nousresearch:
+    label: Nous Research (Hermes)
+    portal: https://portal.nousresearch.com
+    api_docs: https://portal.nousresearch.com/api-docs
+    api_key_env: NOUS_API_KEY
+    # Aliases also accepted by tools/llm_providers.py: NOUSRESEARCH_API_KEY, NOUS_PORTAL_API_KEY
+    base_url_env: NOUS_BASE_URL
+    default_base_url: https://inference-api.nousresearch.com/v1
+    default_model_env: NOUS_MODEL
+    default_model: Hermes-4.3-36B
+    models:
+      - Hermes-4.3-36B   # 128k context
+      - Hermes-4-70B     # 128k context
+      - Hermes-4-405B    # 128k context
+    reasoning_system_prompt: >-
+      You are a deep thinking AI, you may use extremely long chains of thought
+      to deeply consider the problem and deliberate with yourself via systematic
+      reasoning processes to help come to a correct solution prior to answering.
+      You should enclose your thoughts and internal monologue inside <think> </think>
+      tags, and then provide your solution or response to the problem.
+    notes: >-
+      Generate the key on portal.nousresearch.com (credits or subscription).
+      Calls go to inference-api.nousresearch.com/v1 (OpenAI-compatible Bearer auth).
+
+# Active roles — override via .env without editing this file
 orchestrator:
+  # deepseek | openrouter | nousresearch
   provider: deepseek
   model: deepseek-chat
-  # DeepSeek V4.1 (or current flagship) decides when to spawn sub-agents
+  # When provider=nousresearch, prefer Hermes-4-70B / Hermes-4-405B for hard OSINT
 
 subagents:
+  # openrouter | nousresearch | deepseek
   provider: openrouter
-  # Orchestrator may choose ANY OpenRouter model suitable for the task, e.g.:
-  # - moonshotai/kimi-k2
-  # - anthropic/claude-sonnet-4
-  # - openai/gpt-5
-  # - google/gemini-2.5-pro
-  # - x-ai/grok-4
   default_model: ${OPENROUTER_DEFAULT_MODEL}
   routing_hints:
-    long_context_osint: prefer large-context OpenRouter models
-    vision_stego: prefer multimodal models
+    long_context_osint: prefer large-context models (Hermes-4-405B / Gemini / Kimi)
+    vision_stego: prefer multimodal models (OpenRouter multimodal, or Hermes if vision-capable)
     code_forensics: prefer strong coding models
     cheap_classify: prefer fast/cheap models
 
@@ -22,3 +78,4 @@ policy:
   never_use_desktop_ua: true
   never_fuzz: true
   require_team_ok_before_flag_submit: true
+  never_print_api_keys: true
