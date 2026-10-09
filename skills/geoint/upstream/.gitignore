@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.geo-cache/
+*.part
+*.tmp
+.venv/
+.env
+.env.*
+config.local.json

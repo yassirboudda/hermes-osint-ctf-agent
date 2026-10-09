@@ -43,6 +43,13 @@ Techniques only — no personal cookies, tokens, or private message history.
 - Full text + PDF + technique table: `skills/osint-ctf-corpus/wu-deep-threats-*`
 - Digest index: Batch 7 in `skills/writeups-digest.md`
 
+## GEOINT (GeoInt skill)
+- Load `skills/geoint/` ([marouane53/GeoInt](https://github.com/marouane53/GeoInt)): **gut call written first**, then prove with OCR/clues, Overpass, sun/shadow, panoramas.
+- Offline tables: `tools/geoint_cli.py clues lookup …` (plates, calling codes, driving side, text signals).
+- Chronolocation: `tools/geoint_cli.py sun …` before naming buildings; bearings before “that tower”.
+- Precision ≤100 m needs two independent constraints; never invent “matched on Street View”.
+- Soft crawl + `$CTF_UA`; correlate ≥2 sources before a location flag.
+
 ## CTFd hygiene
 - Session cookie lets you inventory challenges; wrong submits cost points.
 - Automating **fuzz** against event infra = ban risk. Soft OSINT only.

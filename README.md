@@ -40,6 +40,7 @@
 | Skills & corpus | OSINT CTF methodology, write-up digests, challenge patterns |
 | Username pivots | **Instant Username**, **Maigret** (soxoj), Sherlock/WMN-compatible flows |
 | Reddit archives | **Rosint-style** Arctic Shift + PullPush (`tools/rosint_reddit.py`) |
+| GEOINT | **GeoInt** ([marouane53/GeoInt](https://github.com/marouane53/GeoInt)) — `skills/geoint/` + `tools/geoint_cli.py` |
 | Enrichment | **OSINT Industries** when API key is set (skipped if absent) |
 | Platform hooks | CTFd, OSINTMapper, captcha solvers, Browser-Use / Apify |
 | OPSEC | Dedicated UA, no fuzz / bruteforce / SE — see `opsec/` |
@@ -107,6 +108,11 @@ python3 tools/rosint_reddit.py user some_handle          # like https://www.rosi
 python3 tools/instant_username.py search some_handle     # like https://instantusername.com/?q=…
 python3 tools/maigret_cli.py search some_handle --top 80 # Maigret subset or full engine
 python3 tools/maigret_cli.py permute john doe --limit 20
+
+# GEOINT (vendored marouane53/GeoInt)
+python3 tools/geoint_cli.py status
+python3 tools/geoint_cli.py clues lookup driving-side left
+python3 tools/geoint_cli.py sun pos --at 48.8566,2.3522 --time 2024-06-21T12:00 --tz Europe/Paris
 # OSINT Industries still used when OSINT_INDUSTRIES_API_KEY is set
 ```
 
@@ -118,6 +124,7 @@ Wire this folder as the skill/knowledge root of your Hermes / Cursor / custom ag
   <a href="https://www.rosint.dev/?u=Wuan_Xijiang"><img src="https://img.shields.io/badge/Open-Rosint%20demo-ff4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Rosint demo" /></a>
   <a href="https://instantusername.com/?q=wuan_xijiang"><img src="https://img.shields.io/badge/Open-InstantUsername%20demo-06b6d4?style=for-the-badge" alt="InstantUsername demo" /></a>
   <a href="https://github.com/soxoj/maigret"><img src="https://img.shields.io/badge/Upstream-Maigret-e11d48?style=for-the-badge&logo=github" alt="Maigret" /></a>
+  <a href="https://github.com/marouane53/GeoInt"><img src="https://img.shields.io/badge/Upstream-GeoInt-22c55e?style=for-the-badge&logo=github" alt="GeoInt" /></a>
 </p>
 
 ```bash
@@ -125,9 +132,14 @@ Wire this folder as the skill/knowledge root of your Hermes / Cursor / custom ag
 python3 tools/maigret_cli.py status
 python3 tools/maigret_cli.py stats
 python3 tools/maigret_cli.py search soxoj --tags coding,social --top 100
+
+# GeoInt helpers (photo geolocation)
+python3 tools/geoint_cli.py doctor
+python3 tools/geoint_cli.py session start --image /abs/path/photo.jpg
 ```
 
-Bundled curated site DB: [`data/maigret_subset.json`](data/maigret_subset.json) (~200 top sites, MIT attribution to [soxoj/maigret](https://github.com/soxoj/maigret)).
+Bundled curated site DB: [`data/maigret_subset.json`](data/maigret_subset.json) (~200 top sites, MIT attribution to [soxoj/maigret](https://github.com/soxoj/maigret)).  
+GeoInt upstream: [`skills/geoint/upstream`](skills/geoint/upstream) from [marouane53/GeoInt](https://github.com/marouane53/GeoInt) (MIT).
 
 ## Required third parties (bring your own keys)
 
@@ -157,6 +169,7 @@ See `.env.example` for the full list. Typical stack:
 | OSINT CTF core | `skills/osint-ctf/` |
 | Username search | `skills/username-search/` |
 | Maigret | `skills/maigret/` |
+| GeoInt | `skills/geoint/` ([upstream](https://github.com/marouane53/GeoInt)) |
 | Rosint Reddit | `skills/rosint-reddit/` |
 | GitHub OSINT | `skills/github-osint/` |
 | CTFd / Mapper / Captcha | `skills/ctfd/`, `skills/osintmapper/`, `skills/captcha-browser/` |
@@ -166,7 +179,8 @@ See `.env.example` for the full list. Typical stack:
 For educational / authorized CTF use. Authors are not responsible for misuse.  
 Do not attack real infrastructure. Respect each event’s rules and local law.
 
-Maigret subset data © [soxoj/maigret](https://github.com/soxoj/maigret) contributors (MIT).
+Maigret subset data © [soxoj/maigret](https://github.com/soxoj/maigret) contributors (MIT).  
+GeoInt skill/scripts/data © [marouane53/GeoInt](https://github.com/marouane53/GeoInt) contributors (MIT); see `skills/geoint/upstream/data/README.md` for table licences.
 
 ## License
 
