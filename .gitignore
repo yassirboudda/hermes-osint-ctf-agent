@@ -11,3 +11,9 @@ cache/
 *.har
 *session*.json
 *cookies*
+# GeoInt local session archives / model caches (never commit)
+geoint-photos/
+**/geoint-photos/
+skills/geoint/upstream/config.local.json
+skills/geoint/upstream/**/__pycache__/
+skills/geoint/upstream/**/.cache/

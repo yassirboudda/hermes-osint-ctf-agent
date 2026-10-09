@@ -9,7 +9,7 @@
 | Email | Holehe, GHunt, Epieos, **OSINT Industries (API)**, NeutrOSINT |
 | Image | Yandex / Bing / Google Lens, TinEye, ExifTool, AperiSolve, GeoSpy |
 | Stego | AperiSolve, binwalk, steghide, zsteg, ZIP-in-image checks |
-| Geo | Overpass, CyclOSM, PeakFinder, Street View history, Google Earth |
+| GEOINT | **GeoInt** ([marouane53/GeoInt](https://github.com/marouane53/GeoInt) via `skills/geoint/` + `tools/geoint_cli.py`) — gut call, OCR/clues, Overpass, sun/shadow, panoramas; also CyclOSM, PeakFinder, Street View history, Google Earth |
 | Archives | Wayback, archive.today, Memento, urlscan |
 | Domain | crt.sh, SecurityTrails, dig, Shodan **passive** |
 | Code | GitHub commits/PR (`skills/github-osint`) |

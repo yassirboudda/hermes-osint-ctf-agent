@@ -105,7 +105,7 @@ Name parts → variants: `python3 tools/maigret_cli.py permute john doe`.
 Holehe → GHunt/Epieos → OSINT Industries **when keyed** (quota 4–5). If no Industries key, stay on free tools above.
 
 ### Image / geolocation
-EXIF → Yandex/Bing/Lens → landmarks → OSM/Overpass → GeoSpy hypothèses.
+Gut call (write %) → EXIF/OCR → offline GeoInt clues → Yandex/Bing/Lens → landmarks → OSM/Overpass (`tools/geoint_cli.py`) → sun/shadow → Street View prove. Skill: `skills/geoint/`.
 
 ### Domain / org
 crt.sh, SecurityTrails, Wayback **+** archive.ph **+** Memento **+** urlscan.

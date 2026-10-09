@@ -26,8 +26,13 @@ You are an OSINT CTF agent.
 - `skills/rosint-reddit/` — deleted/old Reddit via Arctic Shift + PullPush ([rosint.dev](https://www.rosint.dev/))
 - `skills/username-search/` — Instant Username–style pivots ([instantusername.com](https://instantusername.com/)); OSINT Industries when keyed
 - `skills/maigret/` — Maigret username OSINT ([soxoj/maigret](https://github.com/soxoj/maigret)); subset + optional full engine
+- `skills/geoint/` — photo/Street View geolocation ([marouane53/GeoInt](https://github.com/marouane53/GeoInt) vendored); Hermes OPSEC overlays
 - `knowledge/CHALLENGE-PATTERNS.md`
 - `opsec/REGLES-DOR-OPSEC.md`
+
+## GEOINT priority
+1. Load `skills/geoint/` — gut call → offline clues (`tools/geoint_cli.py clues`) → recon/OCR → Overpass/sun → Street View only as needed.
+2. Soft crawl with `$CTF_UA`; skip blocked services; correlate ≥2 sources before a location flag.
 
 ## Username / Reddit priority
 1. Instant Username–style (`tools/instant_username.py` + UI)

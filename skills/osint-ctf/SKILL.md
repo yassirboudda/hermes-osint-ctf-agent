@@ -27,11 +27,12 @@ Hard OSINT / long context / vision → sub-agent provider (often OpenRouter mult
 - `../skills/osint-ctf-corpus/` — offline write-up corpus
 - `../knowledge/` — patterns learned in live CTFs (sanitized)
 - `../opsec/REGLES-DOR-OPSEC.md` — mandatory before network I/O
-- `../tools/` — CTFd, OSINTMapper, OSINT Industries, Rosint Reddit, Instant Username, Maigret, LLM providers helpers
+- `../tools/` — CTFd, OSINTMapper, OSINT Industries, Rosint Reddit, Instant Username, Maigret, GeoInt, LLM providers helpers
 - `../docs/PROVIDERS.md` — DeepSeek / OpenRouter / Nous Research setup
 - `../skills/rosint-reddit/` — deleted/old Reddit history (Arctic Shift + PullPush)
 - `../skills/username-search/` — Instant Username–first pivots; Industries when keyed
 - `../skills/maigret/` — Maigret username OSINT (subset + optional full engine)
+- `../skills/geoint/` — photo geolocation (vendored marouane53/GeoInt + Hermes OPSEC)
 
 ## Soft crawl / anti-ban
 - Dedicated `$CTF_UA` ≠ desktop UA
